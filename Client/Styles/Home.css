@@ -1,0 +1,52 @@
+.Home-Container {
+    display: flex;
+}
+
+.Home-RightDesc {
+    background: #A9A9A9;
+    font-family: Tahoma;
+    font-size: 14px;
+    margin-left: 25px;
+}
+
+.Desc-Header {
+    display: flex;
+    justify-content: space-between;
+    background: gray;
+    border-bottom: 1px solid black;
+}
+
+.Desc-Header-Text {
+    font-family: Tahoma;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 18px;
+}
+
+.Desc-Header-Price {
+    background: red;
+    font-family: "Roboto";
+    border-radius: 5px;
+    padding: 12px;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.Desc-Container-Pic-Img {
+    height: 200px;
+    width: 200px;
+    padding: 10px;
+}
+
+.Desc-Container-Pic {
+    display: flex;
+}
+
+.Desc-Container-Desc {
+    padding: 10px;
+    line-height: 23px;
+}

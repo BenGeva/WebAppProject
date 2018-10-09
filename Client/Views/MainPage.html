@@ -2,8 +2,40 @@
 <head>
     <meta charset="UTF-8">
     <title>OGSports</title>
+
+    <script lang="javascript" src="../Scripts/jquery-3.3.1.min.js"></script>
+
+    <link rel="stylesheet" href="../Styles/MainPage.css">
+    <script lang="javascript" src="../Controllers/MainPageController.js"></script>
+
+    <link rel="stylesheet" href="../Styles/Home.css">
 </head>
 <body>
-    ohad and geva
+    <header class="MainPage-Header">
+        OGSports
+    </header>
+    <div class="MainPage-Container">
+        <div>
+            <button id="HomePageButton" class="MainPage-Tabs-Buttons" onclick="onChangeTab(this.id)">
+                עמוד הבית
+            </button>
+            <button id="ProductsButton" class="MainPage-Tabs-Buttons" onclick="onChangeTab(this.id)">
+                מוצרים
+            </button>
+            <button id="AboutButton" class="MainPage-Tabs-Buttons" onclick="onChangeTab(this.id)">
+                אודות
+            </button>
+        </div>
+        <div class="DynamPage-Container">
+            
+                <script> 
+                $(function(){
+                    $("#HomePageDiv").load("./Home.html"); 
+                });
+                </script>
+                <div id="HomePageDiv"></div>
+
+        </div>
+    </div>
 </body>
 </html>

@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: 
+    url('./Roboto/Roboto-Regular.woff') format('woff') /* Modern Browsers */
+}
+
+body {
+    background: #EFEFEF;
+}
+
+.MainPage-Header {
+    font-family: 'Roboto';
+    text-shadow: 8px -5px 3px #636363;
+    font-size: 90px;
+    font-style: italic;
+    background: #000000;
+    border-radius: 3px;
+    padding: 10px;
+    border-bottom-left-radius: 60px;
+    color: #efefef;
+}
+
+.MainPage-Container {
+    direction: rtl;
+}
+
+.MainPage-Tabs-Buttons {
+    padding: 10px;
+    border: 1px solid #0000b1;
+    width: 110px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 15px;
+    border-top: none;
+    background: white;
+    font-family: Tahoma;
+    margin-left: 5px;
+}
+
+#HomePageButton {
+    background : #D2D2D2;
+}
+
+.MainPage-Tabs-Buttons:hover {
+    cursor: pointer;
+}
+
+.MainPage-Tabs-Buttons:focus {
+    outline: none;
+}
+
+.DynamPage-Container {
+    box-shadow: 0px 0px 4px 0px #5a5a5a;
+    margin-top: 10px;
+    padding: 10px;
+    height: 64%;
+    background: white;
+}

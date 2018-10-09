@@ -1,0 +1,29 @@
+Users - 
+
+userID - int
+userName - nvarchar(50)
+password - nvarchar(50)
+firstName - nvarchar(50)
+lastName - nvarchar(50)
+email - nvarchar(50)
+isAdmin
+
+
+Products - 
+
+productId - int
+productName - nvarchar(50)
+details - text
+price - money
+
+
+Orders -
+
+orderID - int
+userID - int
+
+
+ProductsPerOrder - 
+
+orderId - int
+productId - int

@@ -7,6 +7,7 @@
 }
 
 body {
+    margin: 5px;
     background: #EFEFEF;
 }
 
@@ -24,6 +25,10 @@ body {
 
 .MainPage-Container {
     direction: rtl;
+}
+
+.MainPage-Tabs {
+    display: flex;
 }
 
 .MainPage-Tabs-Buttons {

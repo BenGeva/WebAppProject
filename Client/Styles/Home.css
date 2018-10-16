@@ -49,4 +49,5 @@
 .Desc-Container-Desc {
     padding: 10px;
     line-height: 23px;
+    text-align: right !important;
 }

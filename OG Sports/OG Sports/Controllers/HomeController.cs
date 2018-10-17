@@ -13,10 +13,10 @@ namespace OG_Sports.Controllers
 
         public ActionResult Index()
         {
-            User usr = new User();
-            usr.UserId = 1;
-            db.Users.Add(usr);
-            db.SaveChanges();
+            //User usr = new User();
+            //usr.UserId = 1;
+            //db.Users.Add(usr);
+            //db.SaveChanges();
 
             return View();
         }

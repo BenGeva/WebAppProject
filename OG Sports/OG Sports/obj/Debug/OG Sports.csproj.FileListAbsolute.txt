@@ -95,3 +95,99 @@ C:\Users\ohade\source\repos\OG Sports\OG Sports\bin\EntityFramework.dll
 C:\Users\ohade\source\repos\OG Sports\OG Sports\bin\EntityFramework.SqlServer.dll
 C:\Users\ohade\source\repos\OG Sports\OG Sports\bin\EntityFramework.xml
 C:\Users\ohade\source\repos\OG Sports\OG Sports\bin\EntityFramework.SqlServer.xml
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\ApplicationInsights.config
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\OG Sports.dll.config
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\OG Sports.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\OG Sports.pdb
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\csc.exe
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\csc.exe.config
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\csc.rsp
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\csi.exe
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\csi.exe.config
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\csi.rsp
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\System.AppContext.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\System.Console.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\System.IO.Compression.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\System.IO.Pipes.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\System.Security.Claims.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\System.Threading.Thread.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\System.ValueTuple.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\System.Xml.XPath.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\vbc.exe
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\vbc.exe.config
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\vbc.rsp
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\VBCSCompiler.exe
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\Antlr3.Runtime.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\EntityFramework.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\EntityFramework.SqlServer.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\Microsoft.AI.Web.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\Microsoft.ApplicationInsights.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\Newtonsoft.Json.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\System.Web.Helpers.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\System.Web.Mvc.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\System.Web.Optimization.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\System.Web.Razor.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\System.Web.WebPages.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\System.Web.WebPages.Razor.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\WebGrease.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\EntityFramework.xml
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\EntityFramework.SqlServer.xml
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\System.Web.Helpers.xml
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\System.Web.Mvc.xml
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\System.Web.Optimization.xml
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\System.Web.Razor.xml
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\System.Web.WebPages.xml
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\System.Web.WebPages.Razor.xml
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\Newtonsoft.Json.xml
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\Antlr3.Runtime.pdb
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\Microsoft.AI.Web.xml
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\obj\Debug\OG Sports.csproj.CoreCompileInputs.cache
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\obj\Debug\OG Sports.csproj.CopyComplete
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\obj\Debug\OG Sports.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\obj\Debug\OG Sports.pdb

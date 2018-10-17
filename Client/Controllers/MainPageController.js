@@ -1,7 +1,7 @@
 onChangeTab = (id) => {
-    $("#HomePageButton").css("background", "white");
-    $("#ProductsButton").css("background", "white");
-    $("#AboutButton").css("background", "white");
+    $("#HomePageButton").css("background", "transparent");
+    $("#ProductsButton").css("background", "transparent");
+    $("#AboutButton").css("background", "transparent");
 
-    $("#" + id).css("background", "#D2D2D2");
+    $("#" + id).css("background", "#007bff").css("color", "white");
 }

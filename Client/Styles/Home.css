@@ -23,6 +23,10 @@
     padding: 18px;
 }
 
+.Desc-Header-LeftSide {
+    display: flex;
+}
+
 .Desc-Header-Price {
     background: red;
     font-family: "Roboto";
@@ -31,6 +35,12 @@
     color: white;
     font-size: 17px;
     font-weight: bold;
+    margin-left: 10px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.Desc-Header-Button {
     margin-left: 10px;
     margin-top: 6px;
     margin-bottom: 6px;

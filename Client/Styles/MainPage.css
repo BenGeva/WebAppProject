@@ -12,54 +12,40 @@ body {
 }
 
 .MainPage-Header {
-    font-family: 'Roboto';
-    text-shadow: 8px -5px 3px #636363;
-    font-size: 90px;
-    font-style: italic;
     background: #000000;
     border-radius: 3px;
     padding: 10px;
-    border-bottom-left-radius: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.MainPage-Header-Text {
+    font-family: 'Roboto';
+    text-shadow: 8px -5px 3px #636363;
+    font-size: 40px;
+    font-style: italic;
     color: #efefef;
 }
 
-.MainPage-Container {
+.MainPage-Header-Buttons {
+    align-self: center;
     direction: rtl;
 }
 
-.MainPage-Tabs {
-    display: flex;
-}
-
-.MainPage-Tabs-Buttons {
-    padding: 10px;
-    border: 1px solid #0000b1;
-    width: 110px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    font-size: 15px;
-    border-top: none;
-    background: white;
-    font-family: Tahoma;
+.MainPage-Header-SingleButton {
     margin-left: 5px;
 }
 
 #HomePageButton {
-    background : #D2D2D2;
-}
-
-.MainPage-Tabs-Buttons:hover {
-    cursor: pointer;
-}
-
-.MainPage-Tabs-Buttons:focus {
-    outline: none;
+    background : #007bff;
+    color: white;
 }
 
 .DynamPage-Container {
     box-shadow: 0px 0px 4px 0px #5a5a5a;
     margin-top: 10px;
     padding: 10px;
-    height: 64%;
+    height: 76vh;
     background: white;
+    direction: rtl;
 }

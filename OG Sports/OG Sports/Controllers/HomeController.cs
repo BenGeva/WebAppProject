@@ -23,7 +23,7 @@ namespace OG_Sports.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "OGSports - קצת עלינו";
 
             return View();
         }

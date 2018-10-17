@@ -4,4 +4,5 @@ onChangeTab = (id) => {
     $("#AboutButton").css("background", "transparent");
 
     $("#" + id).css("background", "#007bff").css("color", "white");
+
 }

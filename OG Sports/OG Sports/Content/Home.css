@@ -61,3 +61,60 @@
     line-height: 23px;
     text-align: right !important;
 }
+
+.Carousel-Card {
+    max-width: 235px;
+    max-height: 290px;
+    padding: 5px;
+    border: 1px solid #80808091;
+}
+
+.Carousel-Card-Img {
+    width: 150px;
+    margin: auto;
+}
+
+.Card-Title {
+    max-height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.Card-Price {
+    background: #007bff;
+    font-family: "Roboto";
+    border-radius: 5px;
+    padding: 12px;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.Card-Footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-left: 0px;
+}
+
+.carousel-item-prev,
+.carousel-item-next,
+.carousel-item.active {
+    display:flex;
+}
+
+.carousel-arrows {
+    direction: ltr;
+}
+
+/* smoother transitions */
+.carousel-inner>.carousel-item.next.left,
+.carousel-inner>.carousel-item.prev.right,
+{
+    transition: all 1s ease;
+}
+

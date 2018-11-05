@@ -42,6 +42,11 @@
                 <div class="col-12 carousel-arrows">
                     <a class="btn btn-secondary-outline prev" href=""><i class="fa fa-lg fa-chevron-left"></i></a>
                     <a class="btn btn-secondary-outline next" href=""><i class="fa fa-lg fa-chevron-right"></i></a>
+                    <script type="text/javascript">
+                        debugger;
+                        $('.next').click(function () { $('.carousel').carousel('next'); return false; });
+                        $('.prev').click(function () { $('.carousel').carousel('prev'); return false; });
+                    </script>
                 </div>
             </div>
         </div>
@@ -179,13 +184,3 @@
         </div>
     </section> 
 </div>
-
-
-
-
-<script type="text/javascript">
-    (function ($){
-        $('.next').click(function(){ $('.carousel').carousel('next');return false; });
-        $('.prev').click(function(){ $('.carousel').carousel('prev');return false; });
-    })(jQuery);
-</script>

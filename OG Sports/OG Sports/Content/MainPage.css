@@ -38,10 +38,12 @@ body {
     margin-left: 5px;
 }
 
-/*#HomePageButton {
-    background : #007bff;
-    color: white;
-}*/
+.Header-Buttons-Seperator {
+    border-right: 2px solid lightgray;
+    margin-right: 6px;
+    border-radius: 1px;
+    margin-left: 10px;
+}
 
 .DynamPage-Container {
     box-shadow: 0px 0px 4px 0px #5a5a5a;

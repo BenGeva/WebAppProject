@@ -1613,6 +1613,7 @@
     <Content Include="Content\Icons\fontawesome-free-5.4.1-web\webfonts\fa-solid-900.svg" />
     <Content Include="Content\Images\GoPro.jpg" />
     <Content Include="Content\MainPage.css" />
+    <Content Include="Content\Products.css" />
     <Content Include="Content\UserDetails.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />

@@ -1,0 +1,33 @@
+﻿.roundBtn {
+    border-radius: 200px;
+    height: 200px;
+    width: 200px;
+    margin-left:60px;
+}
+
+.detailsHeader {
+    display: flex;
+    align-items: center;
+}
+
+.adminBtns {
+    justify-content: center;
+    display: flex;
+    margin-top: 50px;
+}
+
+.mngUsrBtn {
+    background-color: #723a3a;
+}
+
+.mngUsrBtn:hover {
+    background-color: #613030;
+}
+
+.graphBtn {
+    background-color: #666ba0;
+}
+
+.graphBtn:hover {
+    background-color: #4d517f;
+}

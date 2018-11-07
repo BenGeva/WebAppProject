@@ -1,9 +1,75 @@
 ﻿@model OG_Sports.Models.User
+@using OG_Sports.Models
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "פרטי משתמש";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    User connectedUser = (User)HttpContext.Current.Session["user"];
+
+    if (connectedUser == null)
+    {
+        Response.Redirect("~/User/Login");
+    }
 }
 
-<h2>Index</h2>
+<div class="detailsHeader">
+    <h3>@connectedUser.FirstName @connectedUser.LastName</h3>
+    <button id="EditButton" type="button" class="btn btn-link" onclick="edit(@connectedUser.UserId)"><i class="fas fa-edit" style="margin-right: 12px;"></i></button>
+</div>
 
+<br />
+<div class="tab-content profile-tab" id="myTabContent">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div class="row">
+            <div class="col-md-2">
+                <b><label>דואר אלקטרוני:</label></b>
+            </div>
+            <div class="col-md-2">
+                <p>@connectedUser.Email</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <b><label>שם פרטי:</label></b>
+            </div>
+            <div class="col-md-2">
+                <p>@connectedUser.FirstName</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <b><label>שם משפחה:</label></b>
+            </div>
+            <div class="col-md-2">
+                <p>@connectedUser.LastName</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+@{
+    if (!connectedUser.IsAdmin)
+    {
+        <div class="adminBtns">
+            <button class="btn btn-secondary btn-lg roundBtn mngUsrBtn" onclick="redirectAdmin('Manage', 'User')">ניהול משתמשים</button>
+            <button type="button" class="btn btn-secondary btn-lg roundBtn" onclick="redirectAdmin('Manage', 'Product')">ניהול מוצרים</button>
+            <button type="button" class="btn btn-secondary btn-lg roundBtn graphBtn" onclick="redirectAdmin('SiteStats', 'User')">נתונים גראפיים</button>
+        </div>
+    }
+}
+
+<script>
+    function edit(userId) {
+        debugger;
+        var link = '@Url.Action("Edit", "User", new { userId = "replaceID" })';
+        link = link.replace("replaceID", userId);
+        location.href = link;
+    }
+
+    function redirectAdmin(action = "Index", controller = "User") {
+        var link = '@Url.Action("action", "controller")';
+        link = link.replace("action", action);
+        link = link.replace("controller", controller);
+        location.href = link;
+    }
+</script>

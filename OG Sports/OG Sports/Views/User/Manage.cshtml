@@ -1,0 +1,77 @@
+﻿@model IEnumerable<OG_Sports.Models.User>
+@using OG_Sports.Models
+
+@{
+    ViewBag.Title = "ניהול משתמשים";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    User connectedUser = (User)HttpContext.Current.Session["user"];
+
+    if (connectedUser == null)
+    {
+        Response.Redirect("~/User/Login");
+    }
+}
+
+<h3>@ViewBag.Title</h3>
+
+<div style="margin-top:20px;">
+    <div>
+        <button id="createUser" type="button" class="btn btn-link" onclick="createUser()"><i class="fas fa-user-plus"></i></button>
+    </div>
+</div>
+<table class="table">
+    <thead class="thead-light">
+        <tr>
+            <th scope="col">דואר אלקטרוני</th>
+            <th scope="col">שם פרטי</th>
+            <th scope="col">שם משפחה</th>
+            <th scope="col">פעולות</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            try
+            {
+                foreach (var currUser in Model)
+                {
+                    <tr>
+                        <td>@currUser.Email</td>
+                        <td>@currUser.FirstName</td>
+                        <td>@currUser.LastName</td>
+                        <td>
+                            <button id="EditButton" type="button" class="btn btn-link" onclick="editUser(@currUser.UserId)"><i class="fas fa-edit"></i></button>
+                            @{
+                                if (currUser.UserId != connectedUser.UserId)
+                                {
+                                    <button id="DeleteUser" type="button" class="btn btn-link" onclick="delUser(@currUser.UserId)"><i class="fas fa-user-minus"></i></button>
+                                }
+                            }
+                        </td>
+                    </tr>
+                }
+            }
+            catch (Exception)
+            {
+                <span class="col-md-12 text-danger">שגיאה, המשתמש אינו קיים במערכת! אנא פנה למנהל התקשורת שלך.</span>
+            }
+        }
+    </tbody>
+</table>
+
+<script type="text/javascript">
+    function createUser() {
+        location.href = '@Url.Action("Create", "User")';
+    }
+
+    function editUser(userId) {
+        var link = '@Url.Action("Edit", "User", new { userId = "replaceID" })';
+        link = link.replace("replaceID", userId);
+        location.href = link;
+    }
+
+    function delUser(userId) {
+        var link = '@Url.Action("Delete", "User", new { userId = "replaceID" })';
+        link = link.replace("replaceID", userId);
+        location.href = link;
+    }
+</script>

@@ -1,8 +1,45 @@
-﻿
+﻿@model IEnumerable<OG_Sports.Models.Product>
+@using OG_Sports.Controllers
+
 @{
     ViewBag.Title = "View";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>View</h2>
-
+<h2>מוצרים</h2>
+<br />
+<div style="display: flex; flex-direction: column;">
+    <table class="table" style="width: 85%; align-self: flex-end; margin-bottom: 0px;">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col" style="width: 200px;"></th>
+                <th scope="col">שם</th>
+                <th scope="col">תיאור</th>
+                <th scope="col">קטגוריה</th>
+                <th scope="col" style="width: 150px;">מחיר</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+    </table>
+    <div style="overflow-y:scroll; height: 60vh;">
+        <table class="table" style="width: 85%;" align="left">
+            <tbody>
+                @foreach (var currProduct in Model)
+                {
+                    <tr>
+                        <th>
+                            <img src=@currProduct.PicPath class="img-thumbnail" style="height: 125px;" />
+                        </th>
+                        <td style="padding-top: 17px; font-size: 22px;">@currProduct.ProductName</td>
+                        <td style="padding-top: 17px; font-size: 19px;">@currProduct.Details</td>
+                        <td style="padding-top: 17px; font-size: 19px;">@currProduct.ProductCategory.Name</td>
+                        <td style="padding-top: 17px; font-family: Roboto; font-size: 22px;" class="text-success font-weight-bold">@currProduct.Price$</td>
+                        <td>
+                            <button type="button" class="ProductTable-BuyButton"><i class="fas fa-3x fa-cart-plus"></i></button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

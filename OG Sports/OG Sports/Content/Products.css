@@ -1,0 +1,28 @@
+﻿.ProductTable-BuyButton {
+    border: none;
+    background: none;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    transition: box-shadow ease-in.2s;
+}
+
+
+.ProductTable-BuyButton:hover {
+    box-shadow: 1px 1px 5px 3px lightblue;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: box-shadow ease-in.2s;
+}
+
+.ProductTable-BuyButton:active {
+    margin-top: 5px;
+}
+
+
+.ProductTable-BuyButton:focus {
+    outline: none;
+}
+
+

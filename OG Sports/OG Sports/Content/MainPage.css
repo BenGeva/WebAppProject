@@ -32,6 +32,7 @@ body {
 .MainPage-Header-Buttons {
     align-self: center;
     direction: rtl;
+    display: flex;
 }
 
 .MainPage-Header-SingleButton {

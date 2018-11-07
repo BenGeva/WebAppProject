@@ -30,7 +30,7 @@
             if (ViewBag.Title != "התחברות")
             {
                 <div class="MainPage-Header-Buttons">
-                    <button id="LoginButton" type="button" class="MainPage-Header-SingleButton btn btn-outline-primary" onclick=""><i class="fas fa-user"></i></button>
+                    <button id="LoginButton" type="button" class="MainPage-Header-SingleButton btn btn-outline-primary" onclick="onChangeTab(this.id, 'Index', 'User')"><i class="fas fa-user"></i></button>
                     <div class="Header-Buttons-Seperator"></div>
                     <button id="HomePageButton" type="button" class="MainPage-Header-SingleButton btn btn-outline-primary" onclick="onChangeTab(this.id, 'Index', 'Home')">עמוד הבית</button>
                     <button id="ProductsButton" type="button" class="MainPage-Header-SingleButton btn btn-outline-primary" onclick="onChangeTab(this.id, 'Index', 'Product')">מוצרים</button>
@@ -38,7 +38,8 @@
                 </div>
             }
          }
-            </header>
+    </header>
+
     <div class="MainPage-Container">
         <div class="DynamPage-Container" id="DynamPage-Container">
             @RenderBody()

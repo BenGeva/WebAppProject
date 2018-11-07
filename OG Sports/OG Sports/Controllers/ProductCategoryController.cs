@@ -16,5 +16,6 @@ namespace OG_Sports.Controllers
         {
             return View();
         }
+
     }
 }

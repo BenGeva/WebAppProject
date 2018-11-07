@@ -192,3 +192,5 @@ C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\obj
 C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\obj\Debug\OG Sports.csproj.CopyComplete
 C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\obj\Debug\OG Sports.dll
 C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\obj\Debug\OG Sports.pdb
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\obj\Debug\OG_Sports.Migrations.Init.resources
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\obj\Debug\OG Sports.csproj.GenerateResource.cache

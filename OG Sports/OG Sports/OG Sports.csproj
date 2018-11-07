@@ -164,6 +164,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811071650362_Init.cs" />
+    <Compile Include="Migrations\201811071650362_Init.Designer.cs">
+      <DependentUpon>201811071650362_Init.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\InitData.cs" />
     <Compile Include="Models\ModelContext.cs" />
@@ -1609,6 +1613,7 @@
     <Content Include="Content\Icons\fontawesome-free-5.4.1-web\webfonts\fa-solid-900.svg" />
     <Content Include="Content\Images\GoPro.jpg" />
     <Content Include="Content\MainPage.css" />
+    <Content Include="Content\UserDetails.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -1702,7 +1707,6 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\MainPageController.js" />
     <Content Include="Scripts\Map.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\popper-utils.js" />
@@ -1741,6 +1745,10 @@
     <Content Include="Views\Product\Index.cshtml" />
     <Content Include="Views\User\Login.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\Manage.cshtml" />
+    <Content Include="Views\User\SiteStats.cshtml" />
+    <Content Include="Views\User\Edit.cshtml" />
+    <Content Include="Views\User\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1757,6 +1765,11 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201811071650362_Init.resx">
+      <DependentUpon>201811071650362_Init.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -10,15 +10,15 @@
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 
-    <link rel="stylesheet" href="../../Content/Icons/fontawesome-free-5.4.1-web/css/all.css">
-    <link rel="stylesheet" href="../../Content/bootstrap.min.css">
-    <link rel="stylesheet" href="../../Content/MainPage.css">
-    <link rel="stylesheet" href="../../Content/Home.css">
-    <link rel="stylesheet" href="../../Content/About.css">
-    @*<script lang="javascript" src="../../Scripts/MainPageController.js"></script>*@
-    <script lang="javascript" src="../../Scripts/Map.js"></script>
-    <script src="../../Scripts/jquery.validate.min.js"></script>
-    <script src="../../Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <link rel="stylesheet" href="~/Content/Icons/fontawesome-free-5.4.1-web/css/all.css">
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/MainPage.css">
+    <link rel="stylesheet" href="~/Content/Home.css">
+    <link rel="stylesheet" href="~/Content/About.css">
+    <link rel="stylesheet" href="~/Content/UserDetails.css">
+    <script lang="javascript" src="~/Scripts/Map.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9VzfSwMx1G88bwD5q9cJRjUC71wL7sfU&callback=initMap"></script>
 </head>
 <body>
@@ -37,7 +37,7 @@
                     <button id="AboutButton" type="button" class="MainPage-Header-SingleButton btn btn-outline-primary" onclick="onChangeTab(this.id, 'About', 'Home')">אודות</button>
                 </div>
             }
-         }
+        }
     </header>
 
     <div class="MainPage-Container">

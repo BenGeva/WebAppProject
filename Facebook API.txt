@@ -1,0 +1,15 @@
+App ID - 333401937215139
+App Secret - 63db5e92ca77f28afdb0ad5b1854b9c1
+
+page-id - 496447494171812
+
+var message = 
+
+FB.api(
+  '/496447494171812/feed',
+  'POST',
+  {"message":"חדש דנדששששש!!"},
+  function(response) {
+      // Insert your code here
+  }
+);

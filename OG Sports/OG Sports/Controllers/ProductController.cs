@@ -13,7 +13,7 @@ namespace OG_Sports.Controllers
 
         [HttpGet]
         public ActionResult Index()
-        {
+        { 
             return View(db.Products.ToList());
         }
 
@@ -31,6 +31,12 @@ namespace OG_Sports.Controllers
             }
 
             return View();
+        }
+
+        [HttpGet]
+        public ActionResult GroupByCategory()
+        {
+            return View(db.Products.GroupBy((x) => x.ProductCategoryID));
         }
     }    
 }

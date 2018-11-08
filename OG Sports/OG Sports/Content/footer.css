@@ -1,0 +1,17 @@
+#myFooter {
+	background-color: #373a48;
+	color:white;
+}
+
+#myFooter .footer-copyright{
+	background-color: #383737;
+	text-align: center;
+}
+
+#myFooter .footer-copyright p{
+	color: #ccc;
+}
+
+#myFooter .social-networks{
+	text-align: center;
+}

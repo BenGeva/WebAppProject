@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" href="~/Content/Icons/fontawesome-free-5.4.1-web/css/all.css">
     <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/footer.css">
     <link rel="stylesheet" href="~/Content/MainPage.css">
     <link rel="stylesheet" href="~/Content/Home.css">
     <link rel="stylesheet" href="~/Content/About.css">
@@ -25,6 +26,16 @@
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9VzfSwMx1G88bwD5q9cJRjUC71wL7sfU&callback=initMap"></script>
 </head>
 <body>
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/he_IL/sdk.js#xfbml=1&version=v3.2&appId=333401937215139&autoLogAppEvents=1';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
     <header class="MainPage-Header">
         <div class="MainPage-Header-Text">
             OGSports
@@ -48,8 +59,36 @@
             @RenderBody()
         </div>
     </div>
+    <footer id="myFooter">
+        <div class="container">
+            <div id="weatherDetail"></div>
+            <div class="fb-like" data-href="https://www.facebook.com/496447494171812" data-width="50" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="true"></div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2016 OGSports - אנו נעשה את הטוב ביותר עבור לקוחותינו </p>
+        </div>
+    </footer>
+
+    <script>
+        $.getJSON('http://api.apixu.com/v1/current.json?key=d9c8c62006ed405984e192217180811&q=Haifa', function (data) {
+            document.getElementById("weatherDetail").innerHTML = "מזג האוויר במטה החברה הינו - " + data.current.temp_c + ' מעלות צלזיוס';
+        });
+    </script>
+
 
     <script type="text/javascript">
+        $(document).ready(function () {
+            $.ajaxSetup({ cache: true });
+            $.getScript('https://connect.facebook.net/en_US/sdk.js', function () {
+                FB.init({
+                    appId: '{333401937215139}',
+                    version: 'v2.7'
+                });
+                $('#loginbutton,#feedbutton').removeAttr('disabled');
+                FB.getLoginStatus(updateStatusCallback);
+            });
+        });
+
         function onChangeTab(id, action="Index", controller="Home")
         {
             $("#HomePageButton").css("background", "transparent");

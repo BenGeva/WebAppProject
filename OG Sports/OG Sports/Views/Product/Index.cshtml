@@ -9,38 +9,43 @@
 <h2>מוצרים</h2>
 <br />
 <div style="display:flex">
-    <div class="ProductFilters-TopSubFilters">
-        <div>
-            <div style="font-size: 20px; margin-bottom: 22px;">שם מוצר:</div>
-            <div class="input-group mb-3">
-                <input type="text" class="form-control">
+    @using (Html.BeginForm("FilterProducts", "Product", FormMethod.Post, new { @class = "ProductFilters-TopSubFilters" }))
+    {
+        <div style="justify-content: space-between;
+                    display: flex;
+                    height: 100%;
+                    flex-direction: column;">
+            <div>
+                <div style="font-size: 20px; margin-bottom: 22px;">שם מוצר:</div>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" name="ProductName">
+                </div>
+
+                <div style="font-size: 20px; margin-top: 22px;">מחיר:</div>
+                <input type="text" id="amount" readonly style="border:0; color:#28a745; font-weight:bold; direction: ltr; width: 95%; margin-bottom:12px" name="ProductPriceInput">
+                <div id="slider-range" style="width: 95%; margin-bottom: 35px;" name="ProductPriceSlider"></div>
+
+                <div style="font-size: 20px; margin-bottom: 22px;">קטגוריה:</div>
+                <div class="dropdown">
+                    <select class="btn btn-secondary dropdown-toggle" name="ProductCategory">
+                        <option value="-1">כל הקטגוריות</option>
+
+                        @foreach (var currProduct in Model.GroupBy(u => new { u.ProductCategoryID, u.ProductCategory.Name }))
+                        {
+                            <option value="@currProduct.Key.ProductCategoryID">@currProduct.Key.Name</option>
+                        }
+
+                    </select>
+                </div>
             </div>
 
-            <div style="font-size: 20px; margin-top: 22px;">מחיר:</div>
-            <input type="text" id="amount" readonly style="border:0; color:#28a745; font-weight:bold; direction: ltr; width: 95%; margin-bottom:12px">
-            <div id="slider-range" style="width: 95%; margin-bottom: 35px;"></div>
-
-            <div style="font-size: 20px; margin-bottom: 22px;">קטגוריה:</div>
-            <div class="dropdown">
-                <select class="btn btn-secondary dropdown-toggle">
-                    <option value="-1">כל הקטגוריות</option>
-                    
-                    @foreach (var currProduct in Model.GroupBy(u => new { u.ProductCategoryID, u.ProductCategory.Name }))
-                    {
-                        <option value="@currProduct.Key.ProductCategoryID">@currProduct.Key.Name</option>
-                    }
-
-                </select>
+            <div>
+                <div class="form-group" style="text-align: center;">
+                    <input type="submit" value="חפש" class="btn btn-primary btn-lg" />
+                </div>
             </div>
         </div>
-
-        <div>
-            <div class="form-group" style="text-align: center;">
-                <input type="submit" value="חפש" class="btn btn-primary btn-lg" />
-            </div>
-        </div>
-
-    </div>
+    }
     <div style="flex: 5; display: flex; flex-direction: column;">
         <table class="table" style="align-self: flex-end; margin-bottom: 0px;">
             <thead class="thead-light">
@@ -84,8 +89,8 @@
     $( "#slider-range" ).slider({
       range: true,
       min: 0,
-      max: 500,
-      values: [ 75, 300 ],
+      max: 1500,
+      values: [ 150, 600 ],
       slide: function( event, ui ) {
         $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
       }

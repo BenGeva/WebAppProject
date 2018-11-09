@@ -32,9 +32,6 @@
     margin-left: 20px;
     border-right: none;
     border-bottom: none;
-    display:flex;
-    flex-direction:column;
-    justify-content: space-between
 }
 
 

@@ -1,0 +1,88 @@
+﻿@model IEnumerable<OG_Sports.Models.Product>
+@using OG_Sports.Models
+
+@{
+    /**/
+
+    ViewBag.Title = "ניהול מוצרים";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    User connectedUser = (User)HttpContext.Current.Session["user"];
+
+    if (connectedUser == null)
+    {
+        Response.Redirect("~/User/Login");
+    }
+}
+
+<h3>@ViewBag.Title</h3>
+
+<div style="margin-top:20px;">
+    <div>
+        <button id="createUser" type="button" class="btn btn-link" onclick="createProduct()"><i class="fas fa-plus"></i>הוסף מוצר</button>
+    </div>
+</div>
+
+<div style="flex: 5; display: flex; flex-direction: column;">
+    <table class="table" style="align-self: flex-end; margin-bottom: 0px;">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col" style="width: 13%;"></th>
+                <th scope="col" style="width: 13%;">שם</th>
+                <th scope="col" style="width: 39%;">תיאור</th>
+                <th scope="col" style="width: 10%">קטגוריה</th>
+                <th scope="col" style="width: 10%">מחיר</th>
+                <th scope="col" style="width: 20%;"></th>
+            </tr>
+        </thead>
+    </table>
+    <div style="overflow-y:scroll; height: 60vh;">
+        <table class="table" align="left">
+            <tbody>
+                @{
+                    try
+                    {
+                        foreach (var currProduct in Model)
+                        {
+                            <tr>
+                                <td style="width: 13%">
+                                    <img src=@currProduct.PicPath class="img-thumbnail" style="height: 125px;" />
+                                </td>
+                                <td style="padding-top: 17px; font-size: 22px; width: 13%">@currProduct.ProductName</td>
+                                <td style="padding-top: 17px; font-size: 19px; width: 40%">@currProduct.Details</td>
+                                <td style="padding-top: 17px; font-size: 19px; width: 10%;">@currProduct.ProductCategory.Name</td>
+                                <td style="padding-top: 17px; font-family: Roboto; font-size: 22px; width: 10%;" class="text-success font-weight-bold">@currProduct.Price$</td>
+                                <td style="width: 20%;">
+                                    <button id="EditButton" type="button" class="btn btn-link" onclick="editProduct(@currProduct.ProductId)"><i class="fas fa-edit"></i></button>
+                                    <button id="DeleteButton" type="button" class="btn btn-link" onclick="delProduct(@currProduct.ProductId)"><i class="fas fa-trash-alt"></i></button>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        <span class="col-md-12 text-danger">שגיאה, המוצר אינו קיים במערכת! אנא פנה למנהל התקשורת שלך.</span>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function createProduct() {
+        location.href = '@Url.Action("Create", "Product")';
+    }
+
+    function editProduct(productID) {
+        var link = '@Url.Action("Edit", "Product", new { productID = "replaceID" })';
+        link = link.replace("replaceID", productID);
+        location.href = link;
+    }
+
+    function delProduct(productID) {
+        var link = '@Url.Action("Delete", "Product", new { productID = "replaceID" })';
+        link = link.replace("replaceID", productID);
+        location.href = link;
+    }
+</script>

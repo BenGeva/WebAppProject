@@ -1,0 +1,115 @@
+﻿@model OG_Sports.Models.Product
+@using OG_Sports.Models
+
+@{
+    ViewBag.Title = "עדכון מוצר";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ModelContext db = new ModelContext();
+
+    User connectedUser = (User)HttpContext.Current.Session["user"];
+
+    if (connectedUser == null)
+    {
+        Response.Redirect("~/User/Login");
+    }
+}
+
+<h3>@ViewBag.Title</h3>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.ProductId)
+    @Html.HiddenFor(model => model.ProductCategoryID)
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.ProductCategoryID, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            <select class="form-control" name="categoryID">
+                @foreach (var currCategory in db.ProductsCategories.ToList())
+                {
+                    if (currCategory.Name == Model.ProductCategory.Name)
+                    {
+                        <option value="@currCategory.ProductCategoryID" selected>@currCategory.Name</option>
+                    }
+                    else
+                    {
+                        <option value="@currCategory.ProductCategoryID">@currCategory.Name</option>
+                    }
+                }
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.ProductName, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.ProductName, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.ProductName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Details, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Details, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Details, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.PicPath, htmlAttributes: new { @class = "control-label col-md-2" })
+        @*<div class="col-md-10">
+            <select class="form-control" name="picPath">
+                @{
+                    int fromIndex = Model.PicPath.IndexOf("Images/") + "Images/".Length;
+                    int toIndex = Model.PicPath.LastIndexOf(".jpg");
+                    Model.PicPath = Model.PicPath.Substring(fromIndex, toIndex - fromIndex);
+                }
+                @foreach (var product in db.Products.ToList())
+                {
+                    fromIndex = product.PicPath.IndexOf("Images/") + "Images/".Length;
+                    toIndex = product.PicPath.LastIndexOf(".jpg");
+                    product.PicPath = product.PicPath.Substring(fromIndex, toIndex - fromIndex);
+
+                    if (product.PicPath == Model.PicPath)
+                    {
+                        <option value="@product.PicPath" selected>@product.PicPath</option>
+                    }
+                    else
+                    {
+                        <option value="@product.PicPath">@product.PicPath</option>
+                    }
+                }
+            </select>
+        </div>*@
+        <div class="col-md-10">
+            @{
+                int fromIndex = Model.PicPath.IndexOf("Images/") + "Images/".Length;
+                int toIndex = Model.PicPath.LastIndexOf(".jpg");
+                Model.PicPath = Model.PicPath.Substring(fromIndex, toIndex - fromIndex);
+            }
+            @Html.EditorFor(model => model.PicPath, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.PicPath, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Price, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="עדכן" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}

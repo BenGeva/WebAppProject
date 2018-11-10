@@ -9,6 +9,7 @@ namespace OG_Sports.Models
     public class Order
     {
         public int OrderId { get; set; }
+        public bool isOpen { get; set; }
 
         [ForeignKey("User")]
         public int UserId { get; set; }

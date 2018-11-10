@@ -9,12 +9,15 @@ namespace OG_Sports.Models
 {
     public class ProductsPerOrder
     {
-        [Key, Column(Order = 1)]
+        [Key]
+        public int id { get; set; }
+
+        [Column(Order = 1)]
         [ForeignKey("Order")]
         public int OrderId { get; set; }
         public Order Order { get; set; }
 
-        [Key, Column(Order = 2)]
+        [Column(Order = 2)]
         [ForeignKey("Product")]
         public int ProductId { get; set; }
         public Product Product { get; set; }

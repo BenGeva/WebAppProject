@@ -1,0 +1,22 @@
+﻿@model OG_Sports.Models.Order
+
+@{
+    ViewBag.Title = "תשלום";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<center>
+    <h3 style="color: #0cea48;">@ViewBag.payMsg</h3>
+    <hr />
+    <br />
+    <div>
+        <button onclick="continueShopping()" class="btn btn-primary"><i class="fas fa-cart-plus"></i>&nbsp המשך לקנות</button>
+    </div>
+</center>
+
+<script type="text/javascript">
+    function continueShopping() {
+        location.href = '@Url.Action("Index", "Product")';
+    }
+</script>

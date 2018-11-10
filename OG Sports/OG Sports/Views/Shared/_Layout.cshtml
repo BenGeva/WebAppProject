@@ -44,14 +44,16 @@
         @{
             if (ViewBag.Title != "התחברות")
             {
-        <div class="MainPage-Header-Buttons">
-            <button id="LoginButton" type="button" class="MainPage-Header-SingleButton btn btn-outline-primary" onclick="onChangeTab(this.id, 'Index', 'User')"><i class="fas fa-user"></i></button>
-            <button id="CartButton" type="button" class="MainPage-Header-SingleButton btn btn-outline-primary" onclick="onChangeTab(this.id, 'Index', 'Order')"><i class="fas fa-shopping-cart"></i></button>
-            <div class="Header-Buttons-Seperator"></div>
-            <button id="HomePageButton" type="button" class="MainPage-Header-SingleButton btn btn-outline-primary" onclick="onChangeTab(this.id, 'Index', 'Home')">עמוד הבית</button>
-            <button id="ProductsButton" type="button" class="MainPage-Header-SingleButton btn btn-outline-primary" onclick="onChangeTab(this.id, 'Index', 'Product')">מוצרים</button>
-            <button id="AboutButton" type="button" class="MainPage-Header-SingleButton btn btn-outline-primary" onclick="onChangeTab(this.id, 'About', 'Home')">אודות</button>
-        </div>
+        <nav>
+            <div class="MainPage-Header-Buttons">
+                <button id="LoginButton" type="button" class="MainPage-Header-SingleButton btn btn-outline-primary" onclick="onChangeTab(this.id, 'Index', 'User')"><i class="fas fa-user"></i></button>
+                <button id="CartButton" type="button" class="MainPage-Header-SingleButton btn btn-outline-primary" onclick="onChangeTab(this.id, 'Index', 'Order')"><i class="fas fa-shopping-cart"></i></button>
+                <div class="Header-Buttons-Seperator"></div>
+                <button id="HomePageButton" type="button" class="MainPage-Header-SingleButton btn btn-outline-primary" onclick="onChangeTab(this.id, 'Index', 'Home')">עמוד הבית</button>
+                <button id="ProductsButton" type="button" class="MainPage-Header-SingleButton btn btn-outline-primary" onclick="onChangeTab(this.id, 'Index', 'Product')">מוצרים</button>
+                <button id="AboutButton" type="button" class="MainPage-Header-SingleButton btn btn-outline-primary" onclick="onChangeTab(this.id, 'About', 'Home')">אודות</button>
+            </div>
+        </nav>
             }
         }
     </header>

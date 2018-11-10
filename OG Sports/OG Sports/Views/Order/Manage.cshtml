@@ -1,0 +1,85 @@
+﻿@model IEnumerable<OG_Sports.Models.Order>
+@using OG_Sports.Models
+
+@{
+    ViewBag.Title = "ההזמנות שלי";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    User connectedUser = (User)HttpContext.Current.Session["user"];
+
+    if (connectedUser == null)
+    {
+        Response.Redirect("~/User/Login");
+    }
+}
+
+<h3>@ViewBag.Title</h3>
+<br/>
+<div style="display:flex">
+    <div style="flex: 5; display: flex; flex-direction: column;">
+        <table class="table" style="align-self: flex-end; margin-bottom: 0px;">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col" style="width: 33%;">מספר הזמנה</th>
+                    <th scope="col" style="width: 33%;">שולם?</th>
+                    <th scope="col" style="width: 33%;">ערוך הזמנה</th>
+                </tr>
+            </thead>
+        </table>
+        <div style="overflow-y:scroll; height: 50vh;">
+            <table class="table" align="left">
+                <tbody>
+                    @{
+                        try
+                        {
+                            int ordersCount = 1;
+                            foreach (var currOrder in Model)
+                            {
+                                <tr>
+                                    <td style="padding-top: 17px; font-size: 22px; width: 33%">@ordersCount</td>
+                                    <td style="width: 33%;">
+                                        @if (!currOrder.isOpen)
+                                        {
+                                            <span><i class="fas fa-check"></i></span>
+                                        }
+                                        else
+                                        {
+                                            <button type="button" class="btn btn-link" onclick="pay(@currOrder.OrderId)"><i class="fas fa-credit-card"></i></button>
+                                        }
+                                    </td>
+                                    <td>
+                                        @if (!currOrder.isOpen)
+                                        {
+                                            <span><i class="fas fa-ban"></i></span>
+                                        }
+                                        else
+                                        {
+                                            <button id="EditButton" type="button" class="btn btn-link" onclick="edit()"><i class="fas fa-edit"></i></button>
+                                        }
+                                    </td>
+                                </tr>
+                                ordersCount++;
+                            }
+                        }
+                        catch (Exception)
+                        {
+                            <span class="col-md-12 text-danger">שגיאה, אינך מחובר. אנא בצע התחברות מחדש!</span>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function edit() {
+        location.href = '@Url.Action("Index", "Order")';
+    }
+
+    function pay() {
+        location.href = '@Url.Action("Pay", "Order")';
+    }
+</script>
+
+

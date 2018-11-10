@@ -47,18 +47,21 @@
     </div>
 </div>
 
-@{
-    if (!connectedUser.IsAdmin)
-    {
-        <div class="adminBtns">
+
+<div class="adminBtns">
+    <button class="btn btn-secondary btn-lg roundBtn ordBtn" onclick="redirectAdmin('Manage', 'Order')">ההזמנות שלי</button>
+    @{ 
+        if (!connectedUser.IsAdmin)
+        {
             <button class="btn btn-secondary btn-lg roundBtn mngUsrBtn" onclick="redirectAdmin('Manage', 'User')">ניהול משתמשים</button>
             <button type="button" class="btn btn-secondary btn-lg roundBtn" onclick="redirectAdmin('Manage', 'Product')">ניהול מוצרים</button>
             <button type="button" class="btn btn-secondary btn-lg roundBtn graphBtn" onclick="redirectAdmin('SiteStats', 'User')">נתונים גראפיים</button>
-        </div>
+        }
     }
-}
+</div>
 
-<script>
+
+    <script>
     function edit(userId) {
         debugger;
         var link = '@Url.Action("Edit", "User", new { userId = "replaceID" })';
@@ -72,4 +75,4 @@
         link = link.replace("controller", controller);
         location.href = link;
     }
-</script>
+    </script>

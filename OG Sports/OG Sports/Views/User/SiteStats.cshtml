@@ -1,9 +1,170 @@
-﻿@model OG_Sports.Models.User
-
-@{
+﻿@{
     ViewBag.Title = "SiteStats";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>SiteStats</h2>
+<h2>נתונים גרפיים</h2>
+<br />
+<br />
+<br />
 
+<div style="display:flex">
+    <div>
+        <div style="
+            font-size: 22px;
+            margin-right: 45px;
+            margin-bottom: 40px;">התפלגות המוצרים לפי קטגוריה:</div>
+        <div style="
+            font-size: 21px;
+            text-shadow: 1px 1px lightgrey;
+            font-weight: bold;" id="ProductsByCategoryPie"></div>
+    </div>
+    <div>
+        <div style="
+        font-size: 22px;
+        margin-right: 45px;
+        margin-bottom: 30px;">כמות רכישות מוצרים עבור כל קטגוריה:</div>
+        <div style="margin-right: 120px; margin-top: 50px;"
+             id="AmountOfPurchesedProductsPerCategory"></div>
+    </div>
+</div>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script type="text/javascript">
+
+    var w = 525,                        
+        h = 525,                            
+        r = 200,                           
+        color = d3.scale.category10();     
+
+    $.ajax({
+        url: "../ProductCategory/GetDataForPie",
+        type: "GET",
+        success: function (results) {
+            var data = JSON.parse(results);
+            var totalSum = data.reduce((acc, x) => acc + parseInt(x.value), 0);
+
+            var vis = d3.select("#ProductsByCategoryPie")
+                .append("svg:svg")         
+                .data([data])                  
+                .attr("width", w)          
+                .attr("height", h)
+                .append("svg:g")              
+                .attr("transform", "translate(" + r + "," + r + ")")    
+
+            var arc = d3.svg.arc()       
+                .outerRadius(r);
+
+            var pie = d3.layout.pie()         
+                .value(function (d) { return d.value; });   
+
+            var arcs = vis.selectAll("g.slice")     
+                .data(pie)                          
+                .enter()                            
+                .append("svg:g")                
+                .attr("class", "slice");    
+
+            arcs.append("svg:path")
+                .attr("fill", function (d, i) { return color(i); }) 
+                .attr("d", arc);                                   
+
+            arcs.append("svg:text")                                     
+                .attr("transform", function (d) {                 
+                    
+                    d.innerRadius = 0;
+                    d.outerRadius = r;
+                    return "translate(" + arc.centroid(d) + ")";      
+                })
+                .attr("text-anchor", "middle")                     
+                .text(function (d, i) {
+                    return data[i].label + " - " + (100 / totalSum * parseInt(data[i].value)).toFixed(1) + "%";
+                });      
+        },
+        error: function (err) {
+
+        }
+    });
+</script>
+<style>
+	.axis {
+	  font: 15px sans-serif;
+	}
+
+	.axis path,
+	.axis line {
+	  fill: none;
+	  stroke: #000;
+	  shape-rendering: crispEdges;
+	}
+</style>
+<script>
+
+    var margin = { top: 20, right: 20, bottom: 30, left: 40 },
+        width = 500 - margin.left - margin.right,
+        height = 300 - margin.top - margin.bottom;
+
+    var x = d3.scale.ordinal().rangeRoundBands([0, width], .1);
+
+    var y = d3.scale.linear().range([height, 0]);
+
+    $.ajax({
+        url: "../ProductCategory/GetDataForBar",
+        type: "GET",
+        success: function (results) {
+            var data = JSON.parse(results);
+
+            var xAxis = d3.svg.axis()
+                .scale(x)
+                .orient("bottom")
+                .ticks(data.length);
+
+            var yAxis = d3.svg.axis()
+                .scale(y)
+                .orient("left")
+                .ticks(10);
+
+            x.domain(data.map(function (d) { return d.name; }));
+            y.domain([0, d3.max(data, function (d) { return d.value; })]);
+
+            var svg = d3.select("#AmountOfPurchesedProductsPerCategory").append("svg")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom)
+                .append("g")
+                .attr("transform",
+                    "translate(" + margin.left + "," + margin.top + ")");
+
+            svg.append("g")
+                .attr("class", "x axis")
+                .attr("transform", "translate(0," + height + ")")
+                .call(xAxis)
+                .selectAll("text")
+                .style("text-anchor", "end")
+                .attr("dx", function (d) { return (-0.4 - (d.length * 0.1).toString() + "em")})
+                .attr("dy", "1em");
+
+            svg.append("g")
+                .attr("class", "y axis")
+                .call(yAxis)
+                .selectAll("text")
+                .attr("dx", "-1.5em")
+                .append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("y", 6)
+                .attr("dy", "1em")
+                .attr("dx", "-1em")
+                .style("text-anchor", "end")
+                .text("כמות");
+
+            svg.selectAll("#AmountOfPurchesedProductsPerCategory")
+                .data(data)
+                .enter().append("rect")
+                .style("fill", "#6e46b4")
+                .attr("x", function (d) { return x(d.name); })
+                .attr("width", x.rangeBand())
+                .attr("y", function (d) { return y(d.value); })
+                .attr("height", function (d) { return height - y(d.value); });
+        },
+        error: function (err) {
+
+        }
+    }); 
+</script>

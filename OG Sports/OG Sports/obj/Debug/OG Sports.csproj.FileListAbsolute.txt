@@ -289,3 +289,100 @@ C:\WebAppProject\OG Sports\OG Sports\obj\Debug\OG Sports.csproj.CoreCompileInput
 C:\WebAppProject\OG Sports\OG Sports\obj\Debug\OG Sports.csproj.CopyComplete
 C:\WebAppProject\OG Sports\OG Sports\obj\Debug\OG Sports.dll
 C:\WebAppProject\OG Sports\OG Sports\obj\Debug\OG Sports.pdb
+C:\WebAppProj\OG Sports\OG Sports\bin\ApplicationInsights.config
+C:\WebAppProj\OG Sports\OG Sports\bin\OG Sports.dll.config
+C:\WebAppProj\OG Sports\OG Sports\bin\OG Sports.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\OG Sports.pdb
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\csc.exe
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\csc.exe.config
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\csc.rsp
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\csi.exe
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\csi.exe.config
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\csi.rsp
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\System.AppContext.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\System.Collections.Immutable.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\System.Console.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\System.Diagnostics.Process.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\System.IO.Compression.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\System.IO.FileSystem.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\System.IO.Pipes.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\System.Reflection.Metadata.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\System.Security.AccessControl.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\System.Security.Claims.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\System.Security.Principal.Windows.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\System.Threading.Thread.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\System.ValueTuple.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\System.Xml.XmlDocument.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\System.Xml.XPath.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\vbc.exe
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\vbc.exe.config
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\vbc.rsp
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\VBCSCompiler.exe
+C:\WebAppProj\OG Sports\OG Sports\bin\roslyn\VBCSCompiler.exe.config
+C:\WebAppProj\OG Sports\OG Sports\bin\Antlr3.Runtime.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\EntityFramework.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\EntityFramework.SqlServer.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\Microsoft.AI.Agent.Intercept.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\Microsoft.AI.DependencyCollector.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\Microsoft.AI.Web.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\Microsoft.AI.WindowsServer.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\Microsoft.ApplicationInsights.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\Microsoft.Web.Infrastructure.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\Newtonsoft.Json.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\System.Diagnostics.DiagnosticSource.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\System.Web.Helpers.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\System.Web.Mvc.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\System.Web.Optimization.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\System.Web.Razor.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\System.Web.WebPages.Deployment.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\System.Web.WebPages.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\System.Web.WebPages.Razor.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\WebGrease.dll
+C:\WebAppProj\OG Sports\OG Sports\bin\EntityFramework.xml
+C:\WebAppProj\OG Sports\OG Sports\bin\EntityFramework.SqlServer.xml
+C:\WebAppProj\OG Sports\OG Sports\bin\System.Web.Helpers.xml
+C:\WebAppProj\OG Sports\OG Sports\bin\System.Web.Mvc.xml
+C:\WebAppProj\OG Sports\OG Sports\bin\System.Web.Optimization.xml
+C:\WebAppProj\OG Sports\OG Sports\bin\System.Web.Razor.xml
+C:\WebAppProj\OG Sports\OG Sports\bin\System.Web.WebPages.xml
+C:\WebAppProj\OG Sports\OG Sports\bin\System.Web.WebPages.Deployment.xml
+C:\WebAppProj\OG Sports\OG Sports\bin\System.Web.WebPages.Razor.xml
+C:\WebAppProj\OG Sports\OG Sports\bin\Newtonsoft.Json.xml
+C:\WebAppProj\OG Sports\OG Sports\bin\Antlr3.Runtime.pdb
+C:\WebAppProj\OG Sports\OG Sports\bin\System.Diagnostics.DiagnosticSource.xml
+C:\WebAppProj\OG Sports\OG Sports\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\WebAppProj\OG Sports\OG Sports\bin\Microsoft.AI.DependencyCollector.xml
+C:\WebAppProj\OG Sports\OG Sports\bin\Microsoft.AI.WindowsServer.xml
+C:\WebAppProj\OG Sports\OG Sports\bin\Microsoft.AI.Web.xml
+C:\WebAppProj\OG Sports\OG Sports\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\WebAppProj\OG Sports\OG Sports\obj\Debug\OG Sports.csprojAssemblyReference.cache
+C:\WebAppProj\OG Sports\OG Sports\obj\Debug\OG Sports.csproj.CoreCompileInputs.cache
+C:\WebAppProj\OG Sports\OG Sports\obj\Debug\OG Sports.csproj.CopyComplete
+C:\WebAppProj\OG Sports\OG Sports\obj\Debug\OG Sports.dll
+C:\WebAppProj\OG Sports\OG Sports\obj\Debug\OG Sports.pdb

@@ -124,9 +124,10 @@ namespace OG_Sports.Controllers
             return View(db.Users.ToList());
         }
 
+        [HttpGet]
         public ActionResult SiteStats()
         {
-            return View();
+            return View(db.ProductsCategories.ToList());
         }
 
         [HttpGet]

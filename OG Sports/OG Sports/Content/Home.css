@@ -47,8 +47,8 @@
 }
 
 .Desc-Container-Pic-Img {
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     padding: 10px;
 }
 
@@ -58,19 +58,21 @@
 
 .Desc-Container-Desc {
     padding: 10px;
+    width: 350px;
     line-height: 23px;
     text-align: right !important;
 }
 
 .Carousel-Card {
     max-width: 235px;
-    max-height: 290px;
+    max-height: 400px;
     padding: 5px;
     border: 1px solid #80808091;
 }
 
 .Carousel-Card-Img {
     width: 150px;
+    height: 200px;
     margin: auto;
 }
 
@@ -116,5 +118,10 @@
 .carousel-inner>.carousel-item.prev.right,
 {
     transition: all 1s ease;
+}
+
+.carousel-inner {
+    width: 105%;
+    max-width: 105%;
 }
 

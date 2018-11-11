@@ -1,11 +1,18 @@
-﻿@{
-    ViewBag.Title = "SiteStats";
+﻿@using OG_Sports.Models
+
+@{
+    ViewBag.Title = "נתונים גרפיים";
     Layout = "~/Views/Shared/_Layout.cshtml";
+
+    User connectedUser = (User)HttpContext.Current.Session["user"];
+
+    if (connectedUser == null)
+    {
+        Response.Redirect("~/User/Login");
+    }
 }
 
-<h2>נתונים גרפיים</h2>
-<br />
-<br />
+<h3>@ViewBag.Title</h3>
 <br />
 
 <div style="display:flex">
@@ -17,7 +24,8 @@
         <div style="
             font-size: 21px;
             text-shadow: 1px 1px lightgrey;
-            font-weight: bold;" id="ProductsByCategoryPie"></div>
+            font-weight: bold;
+            margin-right: 125px;" id="ProductsByCategoryPie"></div>
     </div>
     <div>
         <div style="
@@ -31,9 +39,9 @@
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script type="text/javascript">
 
-    var w = 525,                        
-        h = 525,                            
-        r = 200,                           
+    var w = 300,                        
+        h = 300,                            
+        r = 150,                           
         color = d3.scale.category10();     
 
     $.ajax({

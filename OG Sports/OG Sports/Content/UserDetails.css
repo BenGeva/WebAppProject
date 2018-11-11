@@ -14,6 +14,7 @@
     justify-content: center;
     display: flex;
     margin-top: 50px;
+    column-count: 3;
 }
 
 .mngUsrBtn {

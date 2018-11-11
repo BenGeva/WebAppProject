@@ -30,6 +30,7 @@ body {
 }
 
 .MainPage-Header-Buttons {
+    margin-top: 10px;
     align-self: center;
     direction: rtl;
     display: flex;

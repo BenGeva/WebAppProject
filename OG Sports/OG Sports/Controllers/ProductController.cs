@@ -14,19 +14,24 @@ namespace OG_Sports.Controllers
 
         [HttpGet]
         public ActionResult Index()
-        { 
+        {
+            ViewBag.Products = db.Products.ToList();
+
             return View(db.Products.ToList());
         }
 
         [HttpGet]
         public ActionResult Create()
         {
+            // TODO: CHANGE PATH
+            // ViewBag.DirPath = @"C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\Content\Images";
+            ViewBag.DirPath = @"C:\WebAppProject\OG Sports\OG Sports\Content\Images";
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ProductName, Details, PicPath, Price")] Product prd)
+        public ActionResult Create([Bind(Include = "ProductName, Details, Price")] Product prd)
         {
             if (ModelState.IsValid)
             {
@@ -37,7 +42,7 @@ namespace OG_Sports.Controllers
 
                 prd.ProductCategoryID = category.ProductCategoryID;
                 prd.ProductCategory = category;
-                prd.PicPath = "/Content/Images/" + prd.PicPath + ".jpg";
+                prd.PicPath = "/Content/Images/" + Request["PicPath"] + ".jpg";
                 db.Products.Add(prd);
                 db.SaveChanges();
                 return RedirectToAction("Manage", "Product");
@@ -57,6 +62,10 @@ namespace OG_Sports.Controllers
         [HttpGet]
         public ActionResult Edit(int? productId)
         {
+            // TODO: CHANGE PATH
+            // ViewBag.DirPath = @"C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\Content\Images";
+            ViewBag.DirPath = @"C:\WebAppProject\OG Sports\OG Sports\Content\Images";
+
             if (productId == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -76,24 +85,38 @@ namespace OG_Sports.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ProductId, ProductName, Details, PicPath, Price")] Product prd)
-        {
+        public ActionResult Edit([Bind(Include = "ProductId, ProductName, Details, Price")] Product prd)
+        {     
+            // TODO: CHANGE PATH
+            // ViewBag.DirPath = @"C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\Content\Images";
+            ViewBag.DirPath = @"C:\WebAppProject\OG Sports\OG Sports\Content\Images";
+
+            int categoryID;
+            int.TryParse(Request["categoryID"], out categoryID);
+            ProductCategory category = db.ProductsCategories.SingleOrDefault(x => x.ProductCategoryID == categoryID);
+
+            prd.ProductCategoryID = category.ProductCategoryID;
+            prd.ProductCategory = category;
+
+
+
+            var errors = ModelState
+                                    .Where(x => x.Value.Errors.Count > 0)
+                                    .Select(x => new { x.Key, x.Value.Errors })
+                                    .ToArray();
+
+
             if (ModelState.IsValid)
             {
                 Product prdToUpdate = db.Products.SingleOrDefault(x => x.ProductId == prd.ProductId);
 
                 if (prdToUpdate != null)
                 {
-                    // Get the selected category
-                    int categoryID;
-                    int.TryParse(Request["categoryID"], out categoryID);
-                    ProductCategory category = db.ProductsCategories.SingleOrDefault(x => x.ProductCategoryID == categoryID);
-
                     prdToUpdate.ProductCategoryID = category.ProductCategoryID;
                     prdToUpdate.ProductCategory = category;
                     prdToUpdate.ProductName = prd.ProductName;
                     prdToUpdate.Details = prd.Details;
-                    prdToUpdate.PicPath = "/Content/Images/" + prd.PicPath + ".jpg";
+                    prdToUpdate.PicPath = "/Content/Images/" + Request["PicPath"] + ".jpg";
                     prdToUpdate.Price = prd.Price;
                     db.SaveChanges();
                 }
@@ -148,6 +171,8 @@ namespace OG_Sports.Controllers
         [HttpPost]
         public ActionResult FilterProducts()
         {
+            ViewBag.Products = db.Products.ToList();
+
             string strProductPriceInput = Request["ProductPriceInput"];
             string[] arr = strProductPriceInput.Split('-');
             int minVal = int.Parse(arr[0].Split('$')[1]);

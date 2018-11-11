@@ -1,8 +1,16 @@
 ﻿@model OG_Sports.Models.Order
+@using OG_Sports.Models
 
 @{
     ViewBag.Title = "תשלום";
     Layout = "~/Views/Shared/_Layout.cshtml";
+
+    User connectedUser = (User)HttpContext.Current.Session["user"];
+
+    if (connectedUser == null)
+    {
+        Response.Redirect("~/User/Login");
+    }
 }
 
 <br />

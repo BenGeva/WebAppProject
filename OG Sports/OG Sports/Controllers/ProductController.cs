@@ -62,7 +62,7 @@ namespace OG_Sports.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            // Get the user by the id
+            // Get the product by the id
             Product product = db.Products.Find(productId);
 
             if (product == null)

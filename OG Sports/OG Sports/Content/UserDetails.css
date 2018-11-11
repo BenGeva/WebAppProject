@@ -32,3 +32,11 @@
 .graphBtn:hover {
     background-color: #4d517f;
 }
+
+.ordBtn {
+    background-color: #639dad;
+}
+
+.ordBtn:hover {
+    background-color: #4c7986;
+}

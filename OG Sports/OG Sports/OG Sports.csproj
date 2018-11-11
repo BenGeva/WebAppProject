@@ -160,6 +160,7 @@
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\ProductCategoryController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\ProductsPerOrderController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -1749,12 +1750,17 @@
     <Content Include="Views\Product\Manage.cshtml" />
     <Content Include="Views\Product\Edit.cshtml" />
     <Content Include="Views\Product\Create.cshtml" />
+    <Content Include="Views\Order\Index.cshtml" />
+    <Content Include="Views\Order\AddProduct.cshtml" />
+    <Content Include="Views\Order\Pay.cshtml" />
+    <Content Include="Views\Order\Manage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\Video\" />
     <Folder Include="Views\Order\" />
     <Folder Include="Views\ProductCategory\" />
+    <Folder Include="Views\ProductPerOrder\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

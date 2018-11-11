@@ -1,5 +1,14 @@
-﻿@{
+﻿@using OG_Sports.Models
+
+@{
     ViewBag.Title = "דף הבית";
+
+    User connectedUser = (User)HttpContext.Current.Session["user"];
+
+    if (connectedUser == null)
+    {
+        Response.Redirect("~/User/Login");
+    }
 }
 
 <div id="HomePageDiv">

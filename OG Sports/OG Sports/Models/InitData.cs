@@ -41,6 +41,14 @@ namespace OG_Sports.Models
                 new Product()
                 {
                     ProductCategory = productCategories.FirstOrDefault((x) => x.Name == "סקי"),
+                    Details = "תיק מקצועי עם 8 תאים נפרדים",
+                    ProductName = "תיק סקי 2V",
+                    PicPath = "/Content/Images/SkiBag.jpg",
+                    Price = 339,
+                },
+                new Product()
+                {
+                    ProductCategory = productCategories.FirstOrDefault((x) => x.Name == "סקי"),
                     Details = "קסדת סקי משהו מטורףףףף",
                     ProductName = "קסדת סקי",
                     PicPath = "/Content/Images/SkiHelmet.jpg",

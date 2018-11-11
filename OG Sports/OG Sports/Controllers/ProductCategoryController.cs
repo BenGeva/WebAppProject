@@ -14,8 +14,30 @@ namespace OG_Sports.Controllers
         // GET: ProductCategory
         public ActionResult Index()
         {
-            return View();
+            return View(db.ProductsCategories.ToList());
         }
 
+        [HttpGet]
+        public string GetDataForPie()
+        {
+            string toReturn = "[";
+
+            foreach (var currCat in db.ProductsCategories.ToList())
+            {
+                toReturn += "{ \"label\" : " + "\"" + currCat.Name + "\"" + ", \"value\" : " + "\"" + currCat.Products.ToList().Count + "\"" + " }, ";
+            }
+
+            toReturn = toReturn.Substring(0, toReturn.Length - 2) + "]";
+
+            return (toReturn);
+        }
+
+        [HttpGet]
+        public string GetDataForBar()
+        {
+            //TODO: Implement select from orders
+
+            return "[{ \"name\": \"סקי\", \"value\": \"3\"}, { \"name\": \"כדורגל\", \"value\": \"1\" }, { \"name\": \"כדורסל\", \"value\": \"2\"}, { \"name\": \"הוקי\", \"value\": \"7\" }]";
+        }
     }
 }

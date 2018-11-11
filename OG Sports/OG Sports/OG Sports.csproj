@@ -1757,6 +1757,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\Video\" />
+    <Folder Include="Views\Order\" />
     <Folder Include="Views\ProductCategory\" />
     <Folder Include="Views\ProductPerOrder\" />
   </ItemGroup>

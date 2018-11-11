@@ -25,7 +25,6 @@ namespace OG_Sports.Models
         [Display(Name = "תיאור")]
         public string Details { get; set; }
 
-        [Required]
         [Display(Name = "שם תמונה")]
         public string PicPath { get; set; }
 

@@ -35,9 +35,37 @@ namespace OG_Sports.Controllers
         [HttpGet]
         public string GetDataForBar()
         {
-            //TODO: Implement select from orders
+            string toReturn = "[";
 
-            return "[{ \"name\": \"סקי\", \"value\": \"3\"}, { \"name\": \"כדורגל\", \"value\": \"1\" }, { \"name\": \"כדורסל\", \"value\": \"2\"}, { \"name\": \"הוקי\", \"value\": \"7\" }]";
+            List<Product> boughtP = ( from prd in db.Products
+                                       join perord in db.ProductsPerOrder 
+                                       on prd.ProductId equals perord.ProductId
+                                       join ord in db.Orders
+                                       on perord.OrderId equals ord.OrderId
+                                       where ord.isOpen == false select prd ).ToList();
+
+            Dictionary<string, int> countDic = new Dictionary<string, int>
+            {
+                { "סקי", 0 },
+                { "הוקי", 0 },
+                { "כדורסל", 0 },
+                { "כדורגל", 0 },
+                { "כללי", 0 }
+            };
+
+            foreach (var p in boughtP)
+            {
+                countDic[p.ProductName]++;
+            }
+
+            foreach (var currKeyValue in countDic)
+            {
+                toReturn += "{ \"name\" : " + "\"" + currKeyValue.Key + "\"" + ", \"value\" : " + "\"" + currKeyValue.Value + "\"" + " }, ";
+            }
+
+            toReturn = toReturn.Substring(0, toReturn.Length - 2) + "]";
+
+            return toReturn;
         }
     }
 }

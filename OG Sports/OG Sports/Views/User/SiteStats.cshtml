@@ -22,10 +22,7 @@
             margin-right: 45px;
             margin-bottom: 40px;">התפלגות המוצרים לפי קטגוריה:</div>
         <div style="
-            font-size: 21px;
-            text-shadow: 1px 1px lightgrey;
-            font-weight: bold;
-            margin-right: 125px;" id="ProductsByCategoryPie"></div>
+            font-size: 21px;" id="ProductsByCategoryPie"></div>
     </div>
     <div>
         <div style="
@@ -37,6 +34,7 @@
     </div>
 </div>
 <script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="~/Scripts/d3.legend.js"></script>
 <script type="text/javascript">
 
     var w = 300,                        
@@ -73,19 +71,27 @@
 
             arcs.append("svg:path")
                 .attr("fill", function (d, i) { return color(i); }) 
-                .attr("d", arc);                                   
+                .attr("d", arc);
 
-            arcs.append("svg:text")                                     
-                .attr("transform", function (d) {                 
-                    
-                    d.innerRadius = 0;
-                    d.outerRadius = r;
-                    return "translate(" + arc.centroid(d) + ")";      
-                })
-                .attr("text-anchor", "middle")                     
-                .text(function (d, i) {
-                    return data[i].label + " - " + (100 / totalSum * parseInt(data[i].value)).toFixed(1) + "%";
-                });      
+            arcs.append("path")
+                .attr("d", arc)
+                .attr("data-legend", function (d, i) { return data[i].label + " - " + (100 / totalSum * parseInt(data[i].value)).toFixed(1) + "%"; })
+                .attr("data-legend-pos", function (d, i) { return i; })
+                .style("fill", function (d, i) { return color(i); });
+
+            arcs.append("text")
+                .attr("transform", function (d) { return "translate(" + arc.centroid(d) + ")"; })
+                .attr("dy", ".35em")
+                .style("text-anchor", "middle");
+
+
+            legend = arcs.append("g")
+                    .attr("class", "legend")
+                    .attr("transform", "translate(270," + " -170)")
+                    .style("font-size", "15px")
+                    .style("fill", "white")
+                    .style("stroke", "black")
+                    .call(d3.legend);   
         },
         error: function (err) {
 

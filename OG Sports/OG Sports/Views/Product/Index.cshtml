@@ -33,23 +33,24 @@
                 <input type="text" id="amount" readonly style="border:0; color:#28a745; font-weight:bold; direction: ltr; width: 95%; margin-bottom:12px" name="ProductPriceInput">
                 <div id="slider-range" style="width: 95%; margin-bottom: 35px;" name="ProductPriceSlider"></div>
 
-            <div style="font-size: 20px; margin-bottom: 22px;">קטגוריה:</div>
-            <div class="dropdown">
-                <select class="btn btn-secondary dropdown-toggle" style="width:100%" name="ProductCategory">
-                    <option value="-1">כל הקטגוריות</option>
+                <div style="font-size: 20px; margin-bottom: 22px;">קטגוריה:</div>
+                <div class="dropdown">
+                    <select class="btn btn-secondary dropdown-toggle" name="ProductCategory" style="width:100%">
+                        <option value="-1">כל הקטגוריות</option>
 
-                    @foreach (var currProduct in Model.GroupBy(u => new { u.ProductCategoryID, u.ProductCategory.Name }))
-                    {
-                        <option value="@currProduct.Key.ProductCategoryID">@currProduct.Key.Name</option>
-                    }
+                        @foreach (var currProduct in ((List<Product>)ViewBag.Products).GroupBy(u => new { u.ProductCategoryID, u.ProductCategory.Name }))
+                        {
+                            <option value="@currProduct.Key.ProductCategoryID">@currProduct.Key.Name</option>
+                        }
 
                 </select>
             </div>
         </div>
 
-        <div>
-            <div class="form-group" style="text-align: center; margin-top: 25px;">
-                <input type="submit" value="חפש" class="btn btn-primary btn-lg" />
+            <div>
+                <div class="form-group" style="text-align: center; margin-top: 25px;">
+                    <input type="submit" value="חפש" class="btn btn-primary btn-lg" />
+                </div>
             </div>
         </div>
     </div>

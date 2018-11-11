@@ -82,6 +82,20 @@ namespace OG_Sports.Controllers
             return View();
         }
 
+        [HttpPost]
+        public ActionResult FilterOrders()
+        {
+            User usrConnected = (User)HttpContext.Session["user"];
+
+            if (usrConnected != null)
+            {
+                bool isOpen = bool.Parse(Request["isOpen"]);
+                return View("Manage", db.Orders.Where(x => x.UserId == usrConnected.UserId && x.isOpen == isOpen).ToList());
+            }
+
+            return View("Manage");
+        }
+
         [HttpGet]
         public ActionResult AddProduct(int? productId)
         {

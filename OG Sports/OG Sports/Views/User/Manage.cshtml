@@ -14,49 +14,84 @@
 
 <h3>@ViewBag.Title</h3>
 
-<div style="margin-top:20px;">
-    <div>
-        <button id="createUser" type="button" class="btn btn-link" onclick="createUser()"><i class="fas fa-user-plus"></i></button>
+<div style="display:flex">
+    @using (Html.BeginForm("FilterUsers", "User", FormMethod.Post, new { @class = "ProductFilters-TopSubFilters" }))
+    {
+        <div style="justify-content: space-between;
+                    display: flex;
+                    flex: 1;
+                    height: 100%;
+                    flex-direction: column;">
+            <div>
+                <div style="font-size: 20px; margin-top: 22px;">שם פרטי:</div>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" name="firstName">
+                </div>
+
+                <div style="font-size: 20px; margin-top: 22px;">שם משפחה:</div>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" name="lastName">
+                </div>
+
+                <div style="font-size: 20px; margin-top: 22px;">דואר אלקטרוני:</div>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" name="email">
+                </div>
+            </div>
+
+            <div>
+                <div class="form-group" style="text-align: center; margin-top: 25px;">
+                    <input type="submit" value="חפש" class="btn btn-primary btn-lg" />
+                </div>
+            </div>
+        </div>
+    }
+    <div style="flex: 3; display: flex; flex-direction: column;">
+        <div style="margin-top:20px;">
+            <div>
+                <button id="createUser" type="button" class="btn btn-link" onclick="createUser()"><i class="fas fa-user-plus"></i></button>
+            </div>
+        </div>
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">דואר אלקטרוני</th>
+                    <th scope="col">שם פרטי</th>
+                    <th scope="col">שם משפחה</th>
+                    <th scope="col">פעולות</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    try
+                    {
+                        foreach (var currUser in Model)
+                        {
+                            <tr>
+                                <td>@currUser.Email</td>
+                                <td>@currUser.FirstName</td>
+                                <td>@currUser.LastName</td>
+                                <td>
+                                    <button id="EditButton" type="button" class="btn btn-link" onclick="editUser(@currUser.UserId)"><i class="fas fa-edit"></i></button>
+                                    @{
+                                        if (currUser.UserId != connectedUser.UserId)
+                                        {
+                                            <button id="DeleteUser" type="button" class="btn btn-link" onclick="delUser(@currUser.UserId)"><i class="fas fa-user-minus"></i></button>
+                                        }
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        <span class="col-md-12 text-danger">שגיאה, המשתמש אינו קיים במערכת! אנא פנה למנהל התקשורת שלך.</span>
+                    }
+                }
+            </tbody>
+        </table>
     </div>
 </div>
-<table class="table">
-    <thead class="thead-light">
-        <tr>
-            <th scope="col">דואר אלקטרוני</th>
-            <th scope="col">שם פרטי</th>
-            <th scope="col">שם משפחה</th>
-            <th scope="col">פעולות</th>
-        </tr>
-    </thead>
-    <tbody>
-        @{
-            try
-            {
-                foreach (var currUser in Model)
-                {
-                    <tr>
-                        <td>@currUser.Email</td>
-                        <td>@currUser.FirstName</td>
-                        <td>@currUser.LastName</td>
-                        <td>
-                            <button id="EditButton" type="button" class="btn btn-link" onclick="editUser(@currUser.UserId)"><i class="fas fa-edit"></i></button>
-                            @{
-                                if (currUser.UserId != connectedUser.UserId)
-                                {
-                                    <button id="DeleteUser" type="button" class="btn btn-link" onclick="delUser(@currUser.UserId)"><i class="fas fa-user-minus"></i></button>
-                                }
-                            }
-                        </td>
-                    </tr>
-                }
-            }
-            catch (Exception)
-            {
-                <span class="col-md-12 text-danger">שגיאה, המשתמש אינו קיים במערכת! אנא פנה למנהל התקשורת שלך.</span>
-            }
-        }
-    </tbody>
-</table>
 
 <script type="text/javascript">
     function createUser() {

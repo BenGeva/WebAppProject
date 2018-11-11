@@ -6,3 +6,7 @@
     justify-content: space-between;
     padding-top: 50px;
 }
+
+.MicrosoftMap .NavBar_Container {
+    right: auto !important;
+}

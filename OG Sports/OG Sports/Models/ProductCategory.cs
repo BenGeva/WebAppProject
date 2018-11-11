@@ -10,7 +10,6 @@ namespace OG_Sports.Models
     {
         public int ProductCategoryID { get; set; }
         public string Name { get; set; }
-        public string VideoPath { get; set; }
 
         public virtual ICollection<Product> Products { get; set; }
     }

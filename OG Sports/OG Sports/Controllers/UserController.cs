@@ -184,5 +184,17 @@ namespace OG_Sports.Controllers
 
             return View("Login");
         }
+
+        [HttpPost]
+        public ActionResult FilterUsers()
+        {
+            string firstName = Request["firstName"];
+            string lastName = Request["lastName"];
+            string email = Request["email"];
+
+            return View("Manage", db.Users.Where((x) => x.FirstName.Contains(firstName) && 
+                                                        x.LastName.Contains(lastName) &&
+                                                        x.Email.Contains(email)).ToList());
+        }
     }
 }

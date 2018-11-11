@@ -50,8 +50,8 @@
 
 <div class="adminBtns">
     <button class="btn btn-secondary btn-lg roundBtn ordBtn" onclick="redirectAdmin('Manage', 'Order')">ההזמנות שלי</button>
-    @{ 
-        if (!connectedUser.IsAdmin)
+    @{
+        if (connectedUser.IsAdmin)
         {
             <button class="btn btn-secondary btn-lg roundBtn mngUsrBtn" onclick="redirectAdmin('Manage', 'User')">ניהול משתמשים</button>
             <button type="button" class="btn btn-secondary btn-lg roundBtn" onclick="redirectAdmin('Manage', 'Product')">ניהול מוצרים</button>

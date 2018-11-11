@@ -28,7 +28,7 @@
 .ProductFilters-TopSubFilters {
     flex: 1;
     border: 1px solid lightgray;
-    padding: 15px;
+    padding: 0px 15px 0px 15px;
     margin-left: 20px;
     border-right: none;
     border-bottom: none;

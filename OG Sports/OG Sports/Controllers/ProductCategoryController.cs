@@ -55,7 +55,7 @@ namespace OG_Sports.Controllers
 
             foreach (var p in boughtP)
             {
-                countDic[p.ProductName]++;
+                countDic[p.ProductCategory.Name]++;
             }
 
             foreach (var currKeyValue in countDic)

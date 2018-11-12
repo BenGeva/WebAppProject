@@ -1,4 +1,5 @@
-﻿@using OG_Sports.Models
+﻿@model IEnumerable<OG_Sports.Models.Product>
+@using OG_Sports.Models
 
 @{
     ViewBag.Title = "דף הבית";
@@ -30,106 +31,40 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="card-deck">
-                            <div class="Carousel-Card card">
-                                <img class="Carousel-Card-Img card-img-top" src="../../Content/Images/SkiBoots.jpg">
-                                <div class="card-body">
-                                    <h5 class="Card-Title card-title">מגפי סקי HX5</h5>
-                                    <div class="Card-Footer">
-                                        <div class="Card-Price">
-                                            349$
+                            @for (int i = 0; i < 4; i++)
+                            {
+                                <div class="Carousel-Card card">
+                                    <img class="Carousel-Card-Img card-img-top" src="../..@Model.ElementAt(i).PicPath">
+                                    <div class="card-body">
+                                        <h5 class="Card-Title card-title">@Model.ElementAt(i).ProductName</h5>
+                                        <div class="Card-Footer">
+                                            <div class="Card-Price">
+                                                @Model.ElementAt(i).Price$
+                                            </div>
+                                            <button type="button" class="Desc-Header-Button btn btn-dark" onclick="addProduct(@Model.ElementAt(i).ProductId)"><i class="fas fa-2x fa-cart-plus"></i></button>
                                         </div>
-                                        <button type="button" class="Desc-Header-Button btn btn-dark"><i class="fas fa-2x fa-cart-plus"></i></button>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="Carousel-Card card">
-                                <img class="Carousel-Card-Img card-img-top" src="../../Content/Images/SkiBoard.jpg">
-                                <div class="card-body">
-                                    <h5 class="card-title">מגלשי סקי S01</h5>
-                                    <div class="Card-Footer">
-                                        <div class="Card-Price">
-                                            119$
-                                        </div>
-                                        <button type="button" class="Desc-Header-Button btn btn-dark"><i class="fas fa-2x fa-cart-plus"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="Carousel-Card card">
-                                <img class="Carousel-Card-Img card-img-top" src="../../Content/Images/SkiGloves.jpg">
-                                <div class="card-body">
-                                    <h5 class="card-title">כפפות תרמיות</h5>
-                                    <div class="Card-Footer">
-                                        <div class="Card-Price">
-                                            19$
-                                        </div>
-                                        <button type="button" class="Desc-Header-Button btn btn-dark"><i class="fas fa-2x fa-cart-plus"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="Carousel-Card card">
-                                <img class="Carousel-Card-Img card-img-top" src="../../Content/Images/SkiGoggles.jpg">
-                                <div class="card-body">
-                                    <h5 class="card-title">משקפי סקי</h5>
-                                    <div class="Card-Footer">
-                                        <div class="Card-Price">
-                                            59$
-                                        </div>
-                                        <button type="button" class="Desc-Header-Button btn btn-dark"><i class="fas fa-2x fa-cart-plus"></i></button>
-                                    </div>
-                                </div>
-                            </div>
+                            }
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="card-deck">
-                            <div class="Carousel-Card card">
-                                <img class="Carousel-Card-Img card-img-top" src="../../Content/Images/SkiPoles.jpg">
-                                <div class="card-body">
-                                    <h5 class="card-title">מקלות Leki</h5>
-                                    <div class="Card-Footer">
-                                        <div class="Card-Price">
-                                            89$
+                            @for (int i = 4; i < 8; i++)
+                            {
+                                <div class="Carousel-Card card">
+                                    <img class="Carousel-Card-Img card-img-top" src="../..@Model.ElementAt(i).PicPath">
+                                    <div class="card-body">
+                                        <h5 class="Card-Title card-title">@Model.ElementAt(i).ProductName</h5>
+                                        <div class="Card-Footer">
+                                            <div class="Card-Price">
+                                                @Model.ElementAt(i).Price$
+                                            </div>
+                                            <button type="button" class="Desc-Header-Button btn btn-dark" onclick="addProduct(@Model.ElementAt(i).ProductId)"><i class="fas fa-2x fa-cart-plus"></i></button>
                                         </div>
-                                        <button type="button" class="Desc-Header-Button btn btn-dark"><i class="fas fa-2x fa-cart-plus"></i></button>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="Carousel-Card card">
-                                <img class="Carousel-Card-Img card-img-top" src="../../Content/Images/SkiHelmet.jpg">
-                                <div class="card-body">
-                                    <h5 class="card-title">קסדת סקי</h5>
-                                    <div class="Card-Footer">
-                                        <div class="Card-Price">
-                                            209$
-                                        </div>
-                                        <button type="button" class="Desc-Header-Button btn btn-dark"><i class="fas fa-2x fa-cart-plus"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="Carousel-Card card">
-                                <img class="Carousel-Card-Img card-img-top" src="../../Content/Images/SkiHelmet2.jpg">
-                                <div class="card-body">
-                                    <h5 class="card-title">קסדה פולארית</h5>
-                                    <div class="Card-Footer">
-                                        <div class="Card-Price">
-                                            449$
-                                        </div>
-                                        <button type="button" class="Desc-Header-Button btn btn-dark"><i class="fas fa-2x fa-cart-plus"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="Carousel-Card card">
-                                <img class="Carousel-Card-Img card-img-top" src="../../Content/Images/SkiBoots3.jpg">
-                                <div class="card-body">
-                                    <h5 class="card-title">מגפי TK11</h5>
-                                    <div class="Card-Footer">
-                                        <div class="Card-Price">
-                                            1159$
-                                        </div>
-                                        <button type="button" class="Desc-Header-Button btn btn-dark"><i class="fas fa-2x fa-cart-plus"></i></button>
-                                    </div>
-                                </div>
-                            </div>
+                            }
                         </div>
                     </div>
                 </div>
@@ -148,9 +83,9 @@
                     </div>
                     <div class="Desc-Header-LeftSide">
                         <div class="Desc-Header-Price">
-                            299$
+                            777$
                         </div>
-                        <button type="button" class="Desc-Header-Button btn btn-dark"><i class="fas fa-2x fa-cart-plus"></i></button>
+                        <button type="button" class="Desc-Header-Button btn btn-dark" onclick="addProduct(27)"><i class="fas fa-2x fa-cart-plus"></i></button>
                     </div>
                 </div>
                 <div class="Desc-Container">
@@ -165,3 +100,11 @@
         </div>
     </div>
 </div>
+
+<script>
+    function addProduct(productID) {
+        var link = '@Url.Action("AddProduct", "Order", new { productID = "replaceID" })';
+        link = link.replace("replaceID", productID);
+        location.href = link;
+    }
+</script>

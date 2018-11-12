@@ -23,9 +23,8 @@ namespace OG_Sports.Controllers
         [HttpGet]
         public ActionResult Create()
         {
-            // TODO: CHANGE PATH
-            // ViewBag.DirPath = @"C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\Content\Images";
-            ViewBag.DirPath = @"C:\WebAppProject\OG Sports\OG Sports\Content\Images";
+            //ViewBag.DirPath = @"C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\Content\Images";
+            ViewBag.DirPath = AppDomain.CurrentDomain.BaseDirectory + @"Content\Images";
             return View();
         }
 
@@ -62,9 +61,8 @@ namespace OG_Sports.Controllers
         [HttpGet]
         public ActionResult Edit(int? productId)
         {
-            // TODO: CHANGE PATH
-            // ViewBag.DirPath = @"C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\Content\Images";
-            ViewBag.DirPath = @"C:\WebAppProject\OG Sports\OG Sports\Content\Images";
+            //ViewBag.DirPath = @"C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\Content\Images";
+            ViewBag.DirPath = AppDomain.CurrentDomain.BaseDirectory + @"Content\Images";
 
             if (productId == null)
             {
@@ -86,10 +84,9 @@ namespace OG_Sports.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "ProductId, ProductName, Details, Price")] Product prd)
-        {     
-            // TODO: CHANGE PATH
+        {
             // ViewBag.DirPath = @"C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\Content\Images";
-            ViewBag.DirPath = @"C:\WebAppProject\OG Sports\OG Sports\Content\Images";
+            ViewBag.DirPath = AppDomain.CurrentDomain.BaseDirectory + @"Content\Images";
 
             int categoryID;
             int.TryParse(Request["categoryID"], out categoryID);

@@ -49,6 +49,33 @@ namespace OG_Sports.Models
                 },
                 new Product()
                 {
+                    ProductId = 12,
+                    ProductCategory = productCategories.FirstOrDefault((x) => x.Name == "סקי"),
+                    Details = "של היפופטם טוב ואיכותי",
+                    ProductName = "מעיל סקי מעור",
+                    PicPath = "/Content/Images/SkiJacket1.jpg",
+                    Price = 560,
+                },
+                new Product()
+                {
+                    ProductId = 13,
+                    ProductCategory = productCategories.FirstOrDefault((x) => x.Name == "סקי"),
+                    Details = "יותר זול מההוא למעלה",
+                    ProductName = "מעיל סקי טוב",
+                    PicPath = "/Content/Images/SkiJacket2.jpg",
+                    Price = 540,
+                },
+                new Product()
+                {
+                    ProductId = 14,
+                    ProductCategory = productCategories.FirstOrDefault((x) => x.Name == "סקי"),
+                    Details = "מכנסיים איכותיים פרוותיים פרווהים",
+                    ProductName = "טרמיות טובות",
+                    PicPath = "/Content/Images/ThermalPants.jpg",
+                    Price = 339,
+                },
+                new Product()
+                {
                     ProductId = 2,
                     ProductCategory = productCategories.FirstOrDefault((x) => x.Name == "סקי"),
                     Details = "קסדת סקי משהו מטורףףףף",
@@ -112,6 +139,60 @@ namespace OG_Sports.Models
                 },
                 new Product()
                 {
+                    ProductId = 15,
+                    ProductCategory = productCategories.FirstOrDefault((x) => x.Name == "כדורסל"),
+                    Details = "מכנסיים אחרי משחק של קווין דוראנט",
+                    ProductName = "מכנסי כדורסל",
+                    PicPath = "/Content/Images/BasketPants.jpg",
+                    Price = 1209,
+                },
+                new Product()
+                {
+                    ProductId = 16,
+                    ProductCategory = productCategories.FirstOrDefault((x) => x.Name == "כדורסל"),
+                    Details = "רשת סל מקצועית לא נקרעת",
+                    ProductName = "רשת כדורסל",
+                    PicPath = "/Content/Images/Net.jpg",
+                    Price = 29,
+                },
+                new Product()
+                {
+                    ProductId = 17,
+                    ProductCategory = productCategories.FirstOrDefault((x) => x.Name == "כדורסל"),
+                    Details = "סל שניתן לתלות בקלות רק פטיש ומסמר",
+                    ProductName = "סל לגינה",
+                    PicPath = "/Content/Images/Basket.jpg",
+                    Price = 301,
+                },
+                new Product()
+                {
+                    ProductId = 18,
+                    ProductCategory = productCategories.FirstOrDefault((x) => x.Name == "כדורסל"),
+                    Details = "שרוול טוב לחימום טוב",
+                    ProductName = "שרוול ליד",
+                    PicPath = "/Content/Images/HandSleeve.jpg",
+                    Price = 26,
+                },
+                new Product()
+                {
+                    ProductId = 19,
+                    ProductCategory = productCategories.FirstOrDefault((x) => x.Name == "כדורסל"),
+                    Details = "שרוול טוב לחימום טוב",
+                    ProductName = "שרוול לרגל",
+                    PicPath = "/Content/Images/LegSleeve.jpg",
+                    Price = 15,
+                },
+                new Product()
+                {
+                    ProductId = 20,
+                    ProductCategory = productCategories.FirstOrDefault((x) => x.Name == "כדורסל"),
+                    Details = "מגן זיעה שלא ינזלו טיפות על העיניים",
+                    ProductName = "מגן זיעה",
+                    PicPath = "/Content/Images/BasketballShoes.jpg",
+                    Price = 103,
+                },
+                new Product()
+                {
                     ProductId = 9,
                     ProductCategory = productCategories.FirstOrDefault((x) => x.Name == "הוקי"),
                     Details = "נעליים להחלקה מיטבית",
@@ -130,6 +211,60 @@ namespace OG_Sports.Models
                 },
                 new Product()
                 {
+                    ProductId = 21,
+                    ProductCategory = productCategories.FirstOrDefault((x) => x.Name == "הוקי"),
+                    Details = "המגן החשוב ביותר, שומר אותך בריא ופעיל",
+                    ProductName = "מגן אגן ומפשעה",
+                    PicPath = "/Content/Images/BallsShield.jpg",
+                    Price = 119,
+                },
+                new Product()
+                {
+                    ProductId = 22,
+                    ProductCategory = productCategories.FirstOrDefault((x) => x.Name == "הוקי"),
+                    Details = "כידוע, שחקני הוקי רבים חוטפים כוויות קור.. לא עם הכפפות הללו",
+                    ProductName = "כפפות הוקי ZX",
+                    PicPath = "/Content/Images/HockeyGloves.jpg",
+                    Price = 119,
+                },
+                new Product()
+                {
+                    ProductId = 23,
+                    ProductCategory = productCategories.FirstOrDefault((x) => x.Name == "הוקי"),
+                    Details = "קסדה איכותית, אך עדיין יתכנו תזוזות ראש בחבטות",
+                    ProductName = "קסדת הוקי קלה",
+                    PicPath = "/Content/Images/HockeyHelmet2.jpg",
+                    Price = 119,
+                },
+                new Product()
+                {
+                    ProductId = 24,
+                    ProductCategory = productCategories.FirstOrDefault((x) => x.Name == "הוקי"),
+                    Details = "קסדה שמונעת תזוזת ראש בחבטה",
+                    ProductName = "קסדת הוקי",
+                    PicPath = "/Content/Images/HockeyHelmet.jpg",
+                    Price = 119,
+                },
+                new Product()
+                {
+                    ProductId = 25,
+                    ProductCategory = productCategories.FirstOrDefault((x) => x.Name == "הוקי"),
+                    Details = "מגנים ששומרים היטב על המפרקים",
+                    ProductName = "מגני מרפקים",
+                    PicPath = "/Content/Images/ElbowPads.jpg",
+                    Price = 323,
+                },
+                new Product()
+                {
+                    ProductId = 26,
+                    ProductCategory = productCategories.FirstOrDefault((x) => x.Name == "הוקי"),
+                    Details = "מקל לחבטה עדינה אך עוצמתית",
+                    ProductName = "כדור הוקי רחוב",
+                    PicPath = "/Content/Images/HockeyBall.jpg",
+                    Price = 56,
+                },
+                new Product()
+                {
                     ProductId = 11,
                     ProductCategory = productCategories.FirstOrDefault((x) => x.Name == "כדורגל"),
                     Details = "הכדרו הרשמי של ליגת האלופות. עכשיו בבלעדיות ב OG Sports",
@@ -139,7 +274,7 @@ namespace OG_Sports.Models
                 },
                 new Product()
                 {
-                    ProductId = 12,
+                    ProductId = 27,
                     ProductCategory = productCategories.FirstOrDefault((x) => x.Name == "כללי"),
                     Details = "המוצר הבלתי ייאמן, שמצלם את הבלתי יאומן",
                     ProductName = "גו פרו",
@@ -197,6 +332,13 @@ namespace OG_Sports.Models
                 {
                     OrderId = 4,
                     isOpen = true,
+                    UserId = 2,
+                    User = users.FirstOrDefault((x) => x.Email == "beng@gmail.com"),
+                },
+                new Order
+                {
+                    OrderId = 5,
+                    isOpen = false,
                     UserId = 2,
                     User = users.FirstOrDefault((x) => x.Email == "beng@gmail.com"),
                 }
@@ -281,14 +423,14 @@ namespace OG_Sports.Models
                     OrderId = 1,
                     Order = orders.FirstOrDefault((x) => x.OrderId == 1),
                     ProductId = 12,
-                    Product = products.FirstOrDefault((x) => x.ProductId == 12),
+                    Product = products.FirstOrDefault((x) => x.ProductId == 27),
                 },
                 new ProductsPerOrder
                 {
                     OrderId = 2,
                     Order = orders.FirstOrDefault((x) => x.OrderId == 2),
                     ProductId = 12,
-                    Product = products.FirstOrDefault((x) => x.ProductId == 12),
+                    Product = products.FirstOrDefault((x) => x.ProductId == 27),
                 },
                 new ProductsPerOrder
                 {
@@ -296,6 +438,132 @@ namespace OG_Sports.Models
                     Order = orders.FirstOrDefault((x) => x.OrderId == 3),
                     ProductId = 9,
                     Product = products.FirstOrDefault((x) => x.ProductId == 9),
+                },
+                new ProductsPerOrder
+                {
+                    OrderId = 5,
+                    Order = orders.FirstOrDefault((x) => x.OrderId == 5),
+                    ProductId = 9,
+                    Product = products.FirstOrDefault((x) => x.ProductId == 9),
+                },
+                new ProductsPerOrder
+                {
+                    OrderId = 5,
+                    Order = orders.FirstOrDefault((x) => x.OrderId == 5),
+                    ProductId = 9,
+                    Product = products.FirstOrDefault((x) => x.ProductId == 9),
+                },
+                new ProductsPerOrder
+                {
+                    OrderId = 5,
+                    Order = orders.FirstOrDefault((x) => x.OrderId == 5),
+                    ProductId = 9,
+                    Product = products.FirstOrDefault((x) => x.ProductId == 9),
+                },
+                new ProductsPerOrder
+                {
+                    OrderId = 5,
+                    Order = orders.FirstOrDefault((x) => x.OrderId == 5),
+                    ProductId = 9,
+                    Product = products.FirstOrDefault((x) => x.ProductId == 9),
+                },
+                new ProductsPerOrder
+                {
+                    OrderId = 5,
+                    Order = orders.FirstOrDefault((x) => x.OrderId == 5),
+                    ProductId = 9,
+                    Product = products.FirstOrDefault((x) => x.ProductId == 9),
+                },
+                new ProductsPerOrder
+                {
+                    OrderId = 5,
+                    Order = orders.FirstOrDefault((x) => x.OrderId == 5),
+                    ProductId = 9,
+                    Product = products.FirstOrDefault((x) => x.ProductId == 9),
+                },
+                new ProductsPerOrder
+                {
+                    OrderId = 5,
+                    Order = orders.FirstOrDefault((x) => x.OrderId == 5),
+                    ProductId = 9,
+                    Product = products.FirstOrDefault((x) => x.ProductId == 9),
+                },
+                new ProductsPerOrder
+                {
+                    OrderId = 5,
+                    Order = orders.FirstOrDefault((x) => x.OrderId == 5),
+                    ProductId = 9,
+                    Product = products.FirstOrDefault((x) => x.ProductId == 9),
+                },
+                new ProductsPerOrder
+                {
+                    OrderId = 5,
+                    Order = orders.FirstOrDefault((x) => x.OrderId == 5),
+                    ProductId = 1,
+                    Product = products.FirstOrDefault((x) => x.ProductId == 1),
+                },
+                new ProductsPerOrder
+                {
+                    OrderId = 5,
+                    Order = orders.FirstOrDefault((x) => x.OrderId == 5),
+                    ProductId = 1,
+                    Product = products.FirstOrDefault((x) => x.ProductId == 1),
+                },
+                new ProductsPerOrder
+                {
+                    OrderId = 5,
+                    Order = orders.FirstOrDefault((x) => x.OrderId == 5),
+                    ProductId = 7,
+                    Product = products.FirstOrDefault((x) => x.ProductId == 7),
+                },
+                new ProductsPerOrder
+                {
+                    OrderId = 2,
+                    Order = orders.FirstOrDefault((x) => x.OrderId == 2),
+                    ProductId = 1,
+                    Product = products.FirstOrDefault((x) => x.ProductId == 1),
+                },
+                new ProductsPerOrder
+                {
+                    OrderId = 2,
+                    Order = orders.FirstOrDefault((x) => x.OrderId == 2),
+                    ProductId = 1,
+                    Product = products.FirstOrDefault((x) => x.ProductId == 1),
+                },
+                new ProductsPerOrder
+                {
+                    OrderId = 2,
+                    Order = orders.FirstOrDefault((x) => x.OrderId == 2),
+                    ProductId = 1,
+                    Product = products.FirstOrDefault((x) => x.ProductId == 1),
+                },
+                new ProductsPerOrder
+                {
+                    OrderId = 2,
+                    Order = orders.FirstOrDefault((x) => x.OrderId == 2),
+                    ProductId = 1,
+                    Product = products.FirstOrDefault((x) => x.ProductId == 1),
+                },
+                new ProductsPerOrder
+                {
+                    OrderId = 2,
+                    Order = orders.FirstOrDefault((x) => x.OrderId == 2),
+                    ProductId = 1,
+                    Product = products.FirstOrDefault((x) => x.ProductId == 1),
+                },
+                new ProductsPerOrder
+                {
+                    OrderId = 2,
+                    Order = orders.FirstOrDefault((x) => x.OrderId == 2),
+                    ProductId = 1,
+                    Product = products.FirstOrDefault((x) => x.ProductId == 1),
+                },
+                new ProductsPerOrder
+                {
+                    OrderId = 2,
+                    Order = orders.FirstOrDefault((x) => x.OrderId == 2),
+                    ProductId = 1,
+                    Product = products.FirstOrDefault((x) => x.ProductId == 1),
                 }
             }.ForEach((x) => context.ProductsPerOrder.Add(x));
 

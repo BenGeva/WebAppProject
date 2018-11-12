@@ -386,3 +386,14 @@ C:\WebAppProj\OG Sports\OG Sports\obj\Debug\OG Sports.csproj.CoreCompileInputs.c
 C:\WebAppProj\OG Sports\OG Sports\obj\Debug\OG Sports.csproj.CopyComplete
 C:\WebAppProj\OG Sports\OG Sports\obj\Debug\OG Sports.dll
 C:\WebAppProj\OG Sports\OG Sports\obj\Debug\OG Sports.pdb
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\Accord.dll.config
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\Accord.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\Accord.MachineLearning.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\Accord.Math.Core.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\Accord.Math.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\Accord.Statistics.dll
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\Accord.xml
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\Accord.MachineLearning.xml
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\Accord.Math.xml
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\Accord.Math.Core.xml
+C:\Users\ohade\Desktop\limudim\second year\internet apps\OG Sports\OG Sports\bin\Accord.Statistics.xml

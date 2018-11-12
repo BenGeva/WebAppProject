@@ -21,7 +21,7 @@
             font-size: 22px;
             margin-right: 45px;
             margin-bottom: 40px;">התפלגות המוצרים לפי קטגוריה:</div>
-        <div style="
+        <div style="margin-right:20px;
             font-size: 21px;" id="ProductsByCategoryPie"></div>
     </div>
     <div>
@@ -29,7 +29,7 @@
         font-size: 22px;
         margin-right: 45px;
         margin-bottom: 30px;">כמות רכישות מוצרים עבור כל קטגוריה:</div>
-        <div style="margin-right: 120px; margin-top: 50px;"
+        <div style="margin-top: 50px; margin-right:105px;"
              id="AmountOfPurchesedProductsPerCategory"></div>
     </div>
 </div>
@@ -37,8 +37,8 @@
 <script src="~/Scripts/d3.legend.js"></script>
 <script type="text/javascript">
 
-    var w = 300,                        
-        h = 300,                            
+    var w = 440,                        
+        h = 340,                            
         r = 150,                           
         color = d3.scale.category10();     
 
@@ -87,7 +87,7 @@
 
             legend = arcs.append("g")
                     .attr("class", "legend")
-                    .attr("transform", "translate(270," + " -170)")
+                    .attr("transform", "translate(245," + " -120)")
                     .style("font-size", "15px")
                     .style("fill", "white")
                     .style("stroke", "black")

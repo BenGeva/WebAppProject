@@ -86,6 +86,7 @@ namespace OG_Sports.Controllers
                     usrToUpdate.FirstName = usr.FirstName;
                     usrToUpdate.LastName = usr.LastName;
                     usrToUpdate.Password = usr.Password;
+                    usrToUpdate.IsAdmin = usr.IsAdmin;
                     db.SaveChanges();
 
                     if (((User)HttpContext.Session["user"]).Email == usr.Email)
